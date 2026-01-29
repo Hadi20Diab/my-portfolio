@@ -1,2 +1,103 @@
 @use '../../styles/variables' as vars;
 
+.heroContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	min-height: 80vh;
+	overflow: hidden;
+}
+
+.heroContant {
+	background: vars.$bg;
+	padding: vars.$space-xxl vars.$space-xl;
+	max-width: vars.$container-max;
+	margin: 0 auto;
+	text-align: left;
+	z-index: 2;
+}
+
+.heroContant p {
+	margin: 0 0 0.5rem 0;
+	color: vars.$muted;
+}
+
+.heroContant h1 {
+	margin: 0 0 0.5rem 0;
+	font-size: clamp(2rem, 6vw, 4rem);
+	line-height: 1;
+	color: vars.$text;
+}
+
+.heroContant > p + p {
+	color: vars.$muted;
+	margin-bottom: vars.$space-lg;
+}
+
+.heroButtons {
+	display: flex;
+	gap: vars.$space-md;
+	margin-top: vars.$space-md;
+}
+
+.heroButtons button {
+	border: none;
+	padding: 0.6rem 1rem;
+	background: transparent;
+	border-radius: vars.$radius-md;
+	cursor: pointer;
+	border: 1px solid rgba(0,0,0,0.08);
+}
+
+.socials {
+	display: flex;
+	gap: 0.75rem;
+	margin-top: vars.$space-lg;
+}
+
+.socials .icon {
+	width: 2.25rem;
+	height: 2.25rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.04);
+	border-radius: 6px;
+}
+
+.heroImage {
+	position: relative;
+	min-height: 80vh;
+	background: vars.$hero-dark;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* angled divider */
+	clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.heroImage .portrait {
+	position: relative;
+	width: 70%;
+	max-width: 520px;
+	height: auto;
+}
+
+/* responsive: stack on small screens */
+@media screen and (max-width: #{vars.$bp-md}) {
+	.heroContainer {
+		grid-template-columns: 1fr;
+	}
+
+	.heroImage {
+		order: -1;
+		min-height: 50vh;
+		clip-path: none;
+	}
+
+	.heroContant {
+		padding: vars.$space-lg vars.$space-md;
+		text-align: center;
+	}
+}
+
