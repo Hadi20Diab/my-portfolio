@@ -81,6 +81,10 @@
 	width: 70%;
 	max-width: 520px;
 	height: auto;
+
+    img{
+        position: static !important;
+    }
 }
 
 /* responsive: stack on small screens */
