@@ -66,18 +66,23 @@
 
     .heroImage {
         position: relative;
-        min-height: 80vh;
+        min-height: 70vh;
         background: vars.$hero-dark;
         display: flex;
         align-items: center;
         justify-content: center;
         /* angled divider */
         clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+        top: 0;
+        right: 0;
+        z-index: -1;
+        position: absolute;
+        padding-top: 5rem;
+        width: 55%;
 
         .portrait {
             position: relative;
-            width: 70%;
-            max-width: 520px;
+            max-width: 50%;
             height: auto;
 
             img {
