@@ -5,12 +5,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 vars.$space-xxs;
+    padding: vars.$space-lg vars.$space-xxl;
     height: 3rem;
     // position: fixed;
     // top: 0;
     // left: 0;
-    padding: 0 vars.$space-md;
     height: 3.5rem;
 
     .logoDiv {
@@ -22,7 +21,7 @@
             height: 100%;
             object-fit: contain;
             position: static !important;
-            scale: 1.5;
+            scale: 1.7;
         }
     }
 
@@ -50,9 +49,9 @@
 
         .navButton {
             background: vars.$muted-bg;
-            color: vars.$bg;
+            color: vars.$main-color;
             padding: 0 vars.$space-sm;
-            border-radius: vars.$radius-md;
+            border-radius: vars.$radius-xxl;
             box-shadow: vars.$shadow-sm;
             display: inline-flex;
             align-items: center;
