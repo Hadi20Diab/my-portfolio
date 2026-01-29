@@ -1,12 +1,48 @@
-@import './variables';
+@use './variables' as vars;
 
-html, body, #__next {
+/* Export SCSS tokens as CSS custom properties for theming */
+:root {
+  --bg: #{vars.$bg};
+  --muted-bg: #{vars.$muted-bg};
+  --hero-dark: #{vars.$hero-dark};
+  --hero-accent: #{vars.$hero-accent};
+  --brand: #{vars.$brand};
+  --text: #{vars.$text};
+  --muted: #{vars.$muted};
+  --border: #{vars.$border-color};
+  --radius-md: #{vars.$radius-md};
+  --space-md: #{vars.$space-md};
+  --shadow-sm: #{vars.$shadow-sm};
+}
+
+/* Dark theme overrides (apply with `data-theme="dark"` on <html> or <body>) */
+[data-theme="dark"] {
+  --bg: #{vars.$hero-dark};
+  --muted-bg: #{vars.$hero-dark};
+  --hero-accent: #{vars.$brand-300};
+  --brand: #{vars.$hero-accent};
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.7);
+  --border: rgba(255,255,255,0.06);
+}
+
+html,
+body,
+#__next {
   height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background: #f7f7f7;
-  color: #111;
+  font-family: vars.$font-stack;
+  background: var(--bg);
+  color: var(--text);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$section-spacing;
+  text-align: center;
+  padding: vars.$space-xxl 0;
 }
