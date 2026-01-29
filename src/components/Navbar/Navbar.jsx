@@ -7,7 +7,9 @@ export default function Navbar() {
         <>
             <section className="navContainer">
                 <div className="logoDiv">
-                    <Image src="/logo.png" fill />
+                    <Link href="/" >
+                        <Image src="/logo-dark.png" fill alt="Hadi Diab" />
+                    </Link>
                 </div>
                 <nav className="navLinks">
                     <ul className="navList">
