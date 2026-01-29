@@ -33,9 +33,9 @@
         li {
             list-style: none;
             padding: vars.$space-xs 0;
-            color: vars.$main-color;
-
+            
             a {
+                color: vars.$muted-bg;
                 text-decoration: none;
                 font-size: 1.05rem;
                 font-weight: 600;
@@ -50,7 +50,6 @@
 
         .navButton {
             background: vars.$muted-bg;
-            color: vars.$main-color;
             padding: 0 vars.$space-md;
             border-radius: vars.$radius-xxl;
             box-shadow: vars.$shadow-sm;
@@ -59,6 +58,10 @@
             height: 2.25rem;
             border: none;
             cursor: pointer;
+            
+            a{
+                color: vars.$main-color;
+            }
         }
     }
 }
