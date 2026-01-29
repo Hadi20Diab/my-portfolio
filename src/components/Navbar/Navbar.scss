@@ -15,6 +15,7 @@
     .logoDiv {
         width: 3.5rem;
         height: 3.5rem;
+        position: relative;
 
         img {
             width: 100%;
@@ -32,10 +33,10 @@
         li {
             list-style: none;
             padding: vars.$space-xs 0;
+            color: vars.$main-color;
 
             a {
                 text-decoration: none;
-                color: vars.$main-color;
                 font-size: 1.05rem;
                 font-weight: 600;
                 transition: color vars.$transition-fast ease-in-out, transform vars.$transition-fast ease-in-out;
@@ -50,7 +51,7 @@
         .navButton {
             background: vars.$muted-bg;
             color: vars.$main-color;
-            padding: 0 vars.$space-sm;
+            padding: 0 vars.$space-md;
             border-radius: vars.$radius-xxl;
             box-shadow: vars.$shadow-sm;
             display: inline-flex;
