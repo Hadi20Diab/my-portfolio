@@ -12,9 +12,6 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body>
                 <Navbar />
-                <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '0.5rem 1rem' }}>
-                    <ThemeToggle />
-                </div>
                 <main>
                     {children}
                 </main>

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import './Navbar.scss'
 import Link from 'next/link'
+import ThemeToggle from '../ThemeToggle/ThemeToggle'
 
 export default function Navbar() {
     const [theme, setTheme] = useState('light')
@@ -20,6 +21,8 @@ export default function Navbar() {
 
         return () => observer.disconnect()
     }, [])
+
+
 
     return (
         <>
@@ -41,6 +44,7 @@ export default function Navbar() {
                         <li><Link href="/">Skills</Link></li>
                         <li><Link href="/">Portfolio</Link></li>
                         <li className="navButton"><Link href="/">CONTACT ME</Link></li>
+                        <ThemeToggle />
                     </ul>
                 </nav>
             </section>
