@@ -1,0 +1,188 @@
+@use '../../styles/variables' as vars;
+
+.aboutSection {
+    background: vars.$bg;
+    padding: vars.$space-xxl 0;
+    color: vars.$text;
+
+    .aboutContainer {
+        max-width: vars.$container-max;
+        margin: 0 auto;
+        padding: 0 vars.$space-xl;
+        text-align: center;
+    }
+
+    .aboutHeader {
+        margin-bottom: vars.$space-xxl;
+
+        .titleBox {
+            display: inline-block;
+            border: 3px solid var(--text);
+            padding: 1.2rem 3rem;
+            margin-bottom: vars.$space-xl;
+
+            h2 {
+                margin: 0;
+                font-size: 1.1rem;
+                letter-spacing: 4px;
+                font-weight: 700;
+                color: var(--text);
+            }
+        }
+
+        .aboutDescription {
+            max-width: 600px;
+            margin: 0 auto vars.$space-lg;
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .exploreButton {
+            display: inline-block;
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.45rem 1rem;
+            position: relative;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: color vars.$transition-fast ease;
+
+            &::before,
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 2px;
+                height: 28px;
+                background: rgba(0,0,0,0.3);
+                vertical-align: middle;
+                margin: 0 0.8rem;
+            }
+
+            &:hover {
+                color: var(--brand);
+            }
+        }
+    }
+
+    .decorativeDivider,
+    .bottomDivider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: vars.$space-xxl 0;
+        gap: 1rem;
+
+        .dividerLine {
+            width: 60px;
+            height: 2px;
+            background: rgba(0,0,0,0.15);
+        }
+
+        .dividerPattern {
+            width: 40px;
+            height: 8px;
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(0,0,0,0.15) 0px,
+                rgba(0,0,0,0.15) 2px,
+                transparent 2px,
+                transparent 6px
+            );
+        }
+    }
+
+    .servicesGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: vars.$space-xl;
+        margin: vars.$space-xxl 0;
+
+        .serviceCard {
+            text-align: center;
+            padding: vars.$space-lg;
+
+            h3 {
+                margin: 0 0 vars.$space-md 0;
+                font-size: 1rem;
+                letter-spacing: 3px;
+                font-weight: 700;
+                color: var(--text);
+            }
+
+            p {
+                color: var(--muted);
+                line-height: 1.6;
+                font-size: 0.9rem;
+                margin: 0;
+            }
+        }
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: #{vars.$bp-md}) {
+        padding: vars.$space-xl 0;
+
+        .aboutContainer {
+            padding: 0 vars.$space-md;
+        }
+
+        .aboutHeader {
+            .titleBox {
+                padding: 1rem 2rem;
+
+                h2 {
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        .servicesGrid {
+            grid-template-columns: 1fr;
+            gap: vars.$space-lg;
+        }
+
+        .decorativeDivider,
+        .bottomDivider {
+            .dividerLine {
+                width: 40px;
+            }
+
+            .dividerPattern {
+                width: 30px;
+            }
+        }
+    }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] {
+    .aboutSection {
+        .aboutHeader {
+            .exploreButton {
+                &::before,
+                &::after {
+                    background: rgba(255,255,255,0.3);
+                }
+            }
+        }
+
+        .decorativeDivider,
+        .bottomDivider {
+            .dividerLine {
+                background: rgba(255,255,255,0.15);
+            }
+
+            .dividerPattern {
+                background-image: repeating-linear-gradient(
+                    45deg,
+                    rgba(255,255,255,0.15) 0px,
+                    rgba(255,255,255,0.15) 2px,
+                    transparent 2px,
+                    transparent 6px
+                );
+            }
+        }
+    }
+}

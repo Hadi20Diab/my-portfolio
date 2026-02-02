@@ -11,7 +11,7 @@ export default function HeroSection() {
                 
                 <div className="heroContant">
                     <p>Hi, I am</p>
-                    <h1><span className="hightlightName">Hadi</span> Diab</h1>
+                    <h1 className="heroTitle"><span className="hightlightName">Hadi</span> Diab</h1>
                     <p>Front-end Developer / UI Designer</p>
 
                     <div className="heroButtons">
