@@ -1,10 +1,10 @@
 "use client"
 
 import { useEffect, useState } from 'react'
-import TitleBox from '../../components/TitleBox/TitleBox'
+import TitleBox from '../../../components/TitleBox/TitleBox'
 import './projects.scss'
-import { getPortfolioData } from '../../utils/data'
-import Loading from '../../components/Loading/Loading'
+import { getPortfolioData } from '../../../utils/data'
+import Loading from '../../../components/Loading/Loading'
 import { FiExternalLink, FiGithub, FiCode } from 'react-icons/fi'
 
 export default function ProjectsPage() {
