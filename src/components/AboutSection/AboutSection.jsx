@@ -2,12 +2,11 @@
 
 import { useEffect, useRef, useState } from 'react'
 import './AboutSection.scss'
-import { FiPenTool, FiCode, FiSettings, FiBriefcase, FiBookOpen } from 'react-icons/fi'
+import { FiPenTool, FiCode, FiSettings } from 'react-icons/fi'
 import { getPortfolioData } from '../../utils/data'
 import Loading from '../Loading/Loading'
-import BottomDivider from '../DecorativeDivider/DecorativeDivider'
-import useInView from '../../hooks/useInView'
 import DecorativeDivider from '../DecorativeDivider/DecorativeDivider'
+import useInView from '../../hooks/useInView'
 
 export default function AboutSection() {
     const [data, setData] = useState(null)
@@ -73,40 +72,7 @@ export default function AboutSection() {
                     })}
                 </div>
 
-                <div className="experienceSection">
-                    <h3 className="sectionTitle">
-                        <FiBriefcase /> EXPERIENCE
-                    </h3>
-                    <div className="experienceGrid">
-                        {data.experience.map((exp, index) => (
-                            <div key={index} className="experienceCard">
-                                <h4>{exp.title}</h4>
-                                <p className="company">{exp.company}</p>
-                                <p className="period">{exp.period}</p>
-                                <p className="description">{exp.description}</p>
-                                {exp.website && (
-                                    <a href={exp.website} target="_blank" rel="noreferrer" className="companyLink">
-                                        Visit Website
-                                    </a>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="educationSection">
-                    <h3 className="sectionTitle">
-                        <FiBookOpen /> EDUCATION
-                    </h3>
-                    <div className="educationCard">
-                        <h4>{data.education.degree}</h4>
-                        <p className="institution">{data.education.institution}</p>
-                        <p className="period">{data.education.period}</p>
-                        <p className="description">{data.education.description}</p>
-                    </div>
-                </div>
-
-                <BottomDivider />
+                <DecorativeDivider />
             </div>
         </section>
     )
