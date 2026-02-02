@@ -3,7 +3,7 @@
 .heroContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;    
+    align-items: center;
     overflow: hidden;
 
     .heroContant {
@@ -12,11 +12,10 @@
         margin: 0 auto;
         text-align: left;
         z-index: 2;
-        
+
         .heroTitle {
             position: relative;
             display: inline-block;
-            transition: color 3s ease;
 
             &::after {
                 content: '';
@@ -36,10 +35,6 @@
                 animation: shimmer111 3s linear infinite;
             }
         }
-
-        // .hightlightName{
-        //     color: var(--brand);
-        // }
 
         p {
             margin: 0 0 0.5rem 0;
@@ -95,31 +90,31 @@
             gap: 0.75rem;
             margin-top: vars.$space-lg;
 
-                .icon {
-                    width: 2.6rem;
-                    height: 2.6rem;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    background: rgba(0,0,0,0.04);
-                    border-radius: 8px;
-                    color: var(--text);
-                    transition: background vars.$transition-fast ease, color vars.$transition-fast ease, transform vars.$transition-fast ease;
+            .icon {
+                width: 2.6rem;
+                height: 2.6rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(0, 0, 0, 0.04);
+                border-radius: 8px;
+                color: var(--text);
+                transition: background vars.$transition-fast ease, color vars.$transition-fast ease, transform vars.$transition-fast ease;
 
-                    /* ensure SVG icons inherit currentColor */
-                    svg {
-                        display: block;
-                        width: 1.1rem;
-                        height: 1.1rem;
-                        color: inherit;
-                    }
+                /* ensure SVG icons inherit currentColor */
+                svg {
+                    display: block;
+                    width: 1.1rem;
+                    height: 1.1rem;
+                    color: inherit;
                 }
+            }
 
-                .icon:hover {
-                    background: var(--brand);
-                    color: var(--bg);
-                    transform: translateY(-3px);
-                }
+            .icon:hover {
+                background: var(--brand);
+                color: var(--bg);
+                transform: translateY(-3px);
+            }
         }
     }
 
@@ -167,14 +162,14 @@
     }
 }
 
-.heroFeature{
-    background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.95));
+.heroFeature {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95));
     color: #fff;
     padding: 3.5rem 0;
     position: relative;
     overflow: hidden;
 
-    .featureInner{
+    .featureInner {
         max-width: vars.$container-max;
         margin: 0 auto;
         padding: 0 vars.$space-xl;
@@ -182,24 +177,24 @@
         align-items: center;
     }
 
-    .featureContent{
+    .featureContent {
         width: 100%;
         padding: vars.$space-lg 0;
 
-        h2{
+        h2 {
             margin: 0 0 1rem 0;
             text-transform: uppercase;
             letter-spacing: 6px;
             font-size: 1.1rem;
         }
 
-        p{
-            color: rgba(255,255,255,0.85);
+        p {
+            color: rgba(255, 255, 255, 0.85);
             line-height: 1.7;
             margin-bottom: vars.$space-lg;
         }
 
-        .readMore{
+        .readMore {
             display: inline-block;
             color: #fff;
             text-decoration: none;
@@ -209,12 +204,12 @@
             border-radius: 2px;
 
             &::before,
-            &::after{
+            &::after {
                 content: '';
                 display: inline-block;
                 width: 2px;
                 height: 28px;
-                background: rgba(255,255,255,0.4);
+                background: rgba(255, 255, 255, 0.4);
                 vertical-align: middle;
                 margin: 0 0.8rem;
             }
@@ -222,7 +217,7 @@
     }
 
     /* Decorative large logo mark on the right */
-    &::after{
+    &::after {
         content: '';
         position: absolute;
         right: 0;
@@ -237,10 +232,16 @@
         transform: translateX(10%);
     }
 
-    @media screen and (max-width: #{vars.$bp-md}){
+    @media screen and (max-width: #{vars.$bp-md}) {
         padding: 2rem 0;
-        &::after{ display: none; }
-        .featureInner{ padding: 0 vars.$space-md; }
+
+        &::after {
+            display: none;
+        }
+
+        .featureInner {
+            padding: 0 vars.$space-md;
+        }
     }
 }
 
@@ -248,6 +249,7 @@
     0% {
         background-position: 200% 0;
     }
+
     100% {
         background-position: -200% 0;
     }
