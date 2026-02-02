@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import './AboutSection.scss'
 import { FiPenTool, FiCode, FiSettings, FiBriefcase, FiBookOpen } from 'react-icons/fi'
 import { getPortfolioData } from '../../utils/data'
+import Loading from '../Loading/Loading'
 
 export default function AboutSection() {
     const [data, setData] = useState(null)
@@ -20,7 +21,7 @@ export default function AboutSection() {
         return (
             <section className="aboutSection">
                 <div className="aboutContainer">
-                    <p>Loading...</p>
+                    <Loading />
                 </div>
             </section>
         )

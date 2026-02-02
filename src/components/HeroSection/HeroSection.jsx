@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { FiMail } from 'react-icons/fi'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
 import { getPortfolioData } from '../../utils/data'
+import Loading from '../Loading/Loading'
 
 export default function HeroSection() {
     const [data, setData] = useState(null)
@@ -23,7 +24,7 @@ export default function HeroSection() {
         return (
             <section className="heroContainer">
                 <div className="heroContant">
-                    <p>Loading...</p>
+                    <Loading />
                 </div>
             </section>
         )
