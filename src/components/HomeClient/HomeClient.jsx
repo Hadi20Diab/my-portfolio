@@ -13,11 +13,17 @@ const AboutSection = dynamic(() => import('../AboutSection/AboutSection'), {
   loading: () => <Loading />,
 })
 
+const WorkSection = dynamic(() => import('../WorkSection/WorkSection'), {
+  ssr: false,
+  loading: () => <Loading />,
+})
+
 export default function HomeClient() {
   return (
     <>
       <HeroSection />
       <AboutSection />
+      <WorkSection />
     </>
   )
 }
