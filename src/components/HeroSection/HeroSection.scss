@@ -14,6 +14,10 @@
         text-align: left;
         z-index: 2;
 
+        .hightlightName{
+            color: var(--brand);
+        }
+
         p {
             margin: 0 0 0.5rem 0;
             color: vars.$muted;
@@ -137,5 +141,82 @@
             padding: vars.$space-lg vars.$space-md;
             text-align: center;
         }
+    }
+}
+
+.heroFeature{
+    background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.95));
+    color: #fff;
+    padding: 3.5rem 0;
+    position: relative;
+    overflow: hidden;
+
+    .featureInner{
+        max-width: vars.$container-max;
+        margin: 0 auto;
+        padding: 0 vars.$space-xl;
+        display: flex;
+        align-items: center;
+    }
+
+    .featureContent{
+        width: 100%;
+        padding: vars.$space-lg 0;
+
+        h2{
+            margin: 0 0 1rem 0;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 1.1rem;
+        }
+
+        p{
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+            margin-bottom: vars.$space-lg;
+        }
+
+        .readMore{
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.45rem 1rem;
+            position: relative;
+            letter-spacing: 1px;
+            border-radius: 2px;
+
+            &::before,
+            &::after{
+                content: '';
+                display: inline-block;
+                width: 2px;
+                height: 28px;
+                background: rgba(255,255,255,0.4);
+                vertical-align: middle;
+                margin: 0 0.8rem;
+            }
+        }
+    }
+
+    /* Decorative large logo mark on the right */
+    &::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        height: 100%;
+        background-image: url('/logo-light.png');
+        background-repeat: no-repeat;
+        background-size: 90%;
+        opacity: 0.15;
+        pointer-events: none;
+        transform: translateX(10%);
+    }
+
+    @media screen and (max-width: #{vars.$bp-md}){
+        padding: 2rem 0;
+        &::after{ display: none; }
+        .featureInner{ padding: 0 vars.$space-md; }
     }
 }

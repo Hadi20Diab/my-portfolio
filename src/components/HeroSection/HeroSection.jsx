@@ -11,7 +11,7 @@ export default function HeroSection() {
                 
                 <div className="heroContant">
                     <p>Hi, I am</p>
-                    <h1>Hadi Diab</h1>
+                    <h1><span className="hightlightName">Hadi</span> Diab</h1>
                     <p>Front-end Developer / UI Designer</p>
 
                     <div className="heroButtons">
@@ -29,6 +29,20 @@ export default function HeroSection() {
                     <div className="portrait">
                         {/* Place your hero portrait in `public/hero.jpg` (or change the path below) */}
                         <Image src="/hero-Image.png" alt="Hero" fill style={{ objectFit: 'contain' }} />
+                    </div>
+                </div>
+            </section>
+            <section className="heroFeature">
+                <div className="featureInner">
+                    <div className="featureContent">
+                        <h2>IT BERRIES</h2>
+                        <p>
+                            Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est. Morbi commodo, eros in dignissim tempus, lacus odio rutrum augue, in semper sem magna quis tellus.
+                        </p>
+
+                        <a className="readMore" href="#" aria-label="Read more">
+                            READ MORE
+                        </a>
                     </div>
                 </div>
             </section>
