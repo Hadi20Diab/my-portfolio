@@ -14,6 +14,12 @@
   --space-md: #{vars.$space-md};
   --shadow-sm: #{vars.$shadow-sm};
   --nav-height: 72px;
+  --transition-fast: #{vars.$transition-fast};
+  --transition-base: #{vars.$transition-base};
+  --card-bg: rgba(0,0,0,0.02);
+  --card-border: rgba(0,0,0,0.08);
+  --logo-light: url('/logo-light.png');
+  --logo-dark: url('/logo-dark.png');
 }
 
 /* Dark theme overrides (apply with `data-theme="dark"` on <html> or <body>) */
@@ -25,6 +31,13 @@
   --text: #ffffff;
   --muted: rgba(255, 255, 255, 0.7);
   --border: rgba(255, 255, 255, 0.06);
+  --transition-fast: #{vars.$transition-fast};
+  --transition-base: #{vars.$transition-base};
+  --card-bg: rgba(255,255,255,0.03);
+  --card-border: rgba(255,255,255,0.10);
+  /* swap logo var to dark version by default in dark theme */
+  --logo-light: url('/logo-dark.png');
+  --logo-dark: url('/logo-dark.png');
 }
 
 html,
