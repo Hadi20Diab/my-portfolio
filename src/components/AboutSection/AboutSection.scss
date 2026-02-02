@@ -84,8 +84,7 @@
         }
     }
 
-    .decorativeDivider,
-    .bottomDivider {
+    .decorativeDivider {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -95,19 +94,17 @@
         .dividerLine {
             width: 60px;
             height: 2px;
-            background: rgba(0,0,0,0.15);
+            background: rgba(0, 0, 0, 0.15);
         }
 
         .dividerPattern {
             width: 40px;
             height: 8px;
-            background-image: repeating-linear-gradient(
-                45deg,
-                rgba(0,0,0,0.15) 0px,
-                rgba(0,0,0,0.15) 2px,
-                transparent 2px,
-                transparent 6px
-            );
+            background-image: repeating-linear-gradient(45deg,
+                    rgba(0, 0, 0, 0.15) 0px,
+                    rgba(0, 0, 0, 0.15) 2px,
+                    transparent 2px,
+                    transparent 6px);
         }
     }
 
@@ -129,7 +126,7 @@
                 align-items: center;
                 justify-content: center;
                 margin: 0 auto vars.$space-sm auto;
-                background: rgba(0,0,0,0.04);
+                background: rgba(0, 0, 0, 0.04);
                 border-radius: 8px;
                 color: var(--text);
                 opacity: 0.18;
@@ -176,8 +173,7 @@
             gap: vars.$space-lg;
         }
 
-        .decorativeDivider,
-        .bottomDivider {
+        .decorativeDivider {
             .dividerLine {
                 width: 40px;
             }
@@ -191,10 +187,11 @@
 
 /* New sections for experience and education */
 .aboutSection {
+
     .experienceSection,
     .educationSection {
         margin-top: vars.$space-xxl;
-        
+
         .sectionTitle {
             font-size: 1rem;
             font-weight: 700;
@@ -205,7 +202,7 @@
             justify-content: center;
             gap: vars.$space-sm;
             letter-spacing: 2px;
-            
+
             svg {
                 color: var(--brand);
             }
@@ -221,26 +218,26 @@
 
     .experienceCard,
     .educationCard {
-        background: rgba(0,0,0,0.02);
-        border: 2px solid rgba(0,0,0,0.08);
+        background: rgba(0, 0, 0, 0.02);
+        border: 2px solid rgba(0, 0, 0, 0.08);
         border-radius: 12px;
         padding: vars.$space-lg;
         transition: all vars.$transition-base ease;
         text-align: left;
-        
+
         &:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             border-color: var(--brand);
         }
-        
+
         h4 {
             font-size: 1.1rem;
             font-weight: 600;
             color: var(--brand);
             margin-bottom: vars.$space-sm;
         }
-        
+
         .company,
         .institution {
             font-size: 1rem;
@@ -248,27 +245,27 @@
             color: var(--text);
             margin-bottom: vars.$space-xs;
         }
-        
+
         .period {
             font-size: 0.85rem;
             color: var(--muted);
             margin-bottom: vars.$space-sm;
             font-style: italic;
         }
-        
+
         .description {
             font-size: 0.9rem;
             color: var(--muted);
             line-height: 1.6;
             margin-bottom: vars.$space-sm;
         }
-        
+
         .companyLink {
             font-size: 0.85rem;
             color: var(--brand);
             text-decoration: none;
             font-weight: 500;
-            
+
             &:hover {
                 text-decoration: underline;
             }
@@ -276,8 +273,8 @@
     }
 
     .contactInfo {
-        background: rgba(0,0,0,0.02);
-        border: 2px solid rgba(0,0,0,0.08);
+        background: rgba(0, 0, 0, 0.02);
+        border: 2px solid rgba(0, 0, 0, 0.08);
         border-radius: 12px;
         padding: vars.$space-md;
         margin: vars.$space-lg 0;
@@ -285,16 +282,16 @@
         max-width: 400px;
         margin-left: auto;
         margin-right: auto;
-        
+
         p {
             margin-bottom: vars.$space-xs;
             font-size: 0.9rem;
-            
+
             strong {
                 color: var(--brand);
                 margin-right: vars.$space-xs;
             }
-            
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -307,27 +304,25 @@
     .aboutSection {
         .aboutHeader {
             .exploreButton {
+
                 &::before,
                 &::after {
-                    background: rgba(255,255,255,0.3);
+                    background: rgba(255, 255, 255, 0.3);
                 }
             }
         }
 
-        .decorativeDivider,
-        .bottomDivider {
+        .decorativeDivider {
             .dividerLine {
-                background: rgba(255,255,255,0.15);
+                background: rgba(255, 255, 255, 0.15);
             }
 
             .dividerPattern {
-                background-image: repeating-linear-gradient(
-                    45deg,
-                    rgba(255,255,255,0.15) 0px,
-                    rgba(255,255,255,0.15) 2px,
-                    transparent 2px,
-                    transparent 6px
-                );
+                background-image: repeating-linear-gradient(45deg,
+                        rgba(255, 255, 255, 0.15) 0px,
+                        rgba(255, 255, 255, 0.15) 2px,
+                        transparent 2px,
+                        transparent 6px);
             }
         }
 
@@ -343,11 +338,11 @@
         .experienceCard,
         .educationCard,
         .contactInfo {
-            background: rgba(255,255,255,0.03);
-            border-color: rgba(255,255,255,0.1);
-            
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.1);
+
             &:hover {
-                box-shadow: 0 8px 32px rgba(255,255,255,0.05);
+                box-shadow: 0 8px 32px rgba(255, 255, 255, 0.05);
                 border-color: var(--brand);
             }
         }

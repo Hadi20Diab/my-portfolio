@@ -5,6 +5,7 @@ import './AboutSection.scss'
 import { FiPenTool, FiCode, FiSettings, FiBriefcase, FiBookOpen } from 'react-icons/fi'
 import { getPortfolioData } from '../../utils/data'
 import Loading from '../Loading/Loading'
+import BottomDivider from '../BottomDivider/BottomDivider'
 import useInView from '../../hooks/useInView'
 
 export default function AboutSection() {
@@ -113,11 +114,7 @@ export default function AboutSection() {
                     </div>
                 </div>
 
-                <div className="bottomDivider">
-                    <div className="dividerLine"></div>
-                    <div className="dividerPattern"></div>
-                    <div className="dividerLine"></div>
-                </div>
+                <BottomDivider />
             </div>
         </section>
     )

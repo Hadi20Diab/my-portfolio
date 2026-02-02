@@ -1,0 +1,56 @@
+@use '../../styles/variables' as vars;
+
+.bottomDivider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: vars.$space-xxl 0;
+    gap: 1rem;
+
+    .dividerLine {
+        width: 60px;
+        height: 2px;
+        background: rgba(0,0,0,0.15);
+    }
+
+    .dividerPattern {
+        width: 40px;
+        height: 8px;
+        background-image: repeating-linear-gradient(
+            45deg,
+            rgba(0,0,0,0.15) 0px,
+            rgba(0,0,0,0.15) 2px,
+            transparent 2px,
+            transparent 6px
+        );
+    }
+
+    @media screen and (max-width: #{vars.$bp-md}) {
+        .dividerLine {
+            width: 40px;
+        }
+
+        .dividerPattern {
+            width: 30px;
+        }
+    }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] {
+    .bottomDivider {
+        .dividerLine {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .dividerPattern {
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(255,255,255,0.15) 0px,
+                rgba(255,255,255,0.15) 2px,
+                transparent 2px,
+                transparent 6px
+            );
+        }
+    }
+}
