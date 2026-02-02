@@ -1,0 +1,67 @@
+@use '../../styles/variables' as vars;
+
+.skillsSection {
+  padding: vars.$space-xxl 0;
+  background: transparent;
+
+  .skillsInner {
+    max-width: vars.$container-max;
+    margin: 0 auto;
+    padding: 0 vars.$space-xl;
+    text-align: center;
+  }
+
+  .skillsControls {
+    display: flex;
+    align-items: center;
+    gap: vars.$space-md;
+    margin-top: vars.$space-lg;
+  }
+
+  .ctrl {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background vars.$transition-fast ease, transform vars.$transition-fast ease;
+
+    &:hover { transform: translateY(-3px); background: var(--muted-bg); }
+  }
+
+  .skillsTrack {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 8px 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar { display: none; }
+
+    .skillChip {
+      flex: 0 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--text);
+      font-weight: 600;
+      white-space: nowrap;
+      transition: transform vars.$transition-fast ease, background vars.$transition-fast ease;
+
+      &:hover { transform: translateY(-4px); background: var(--brand); color: var(--bg); }
+    }
+  }
+
+  @media screen and (max-width: #{vars.$bp-md}) {
+    .skillsControls { gap: vars.$space-sm; }
+    .ctrl { width: 38px; height: 38px; }
+  }
+}
