@@ -6,6 +6,7 @@ import { getPortfolioData } from '../../utils/data'
 import Loading from '../Loading/Loading'
 import useInView from '../../hooks/useInView'
 import TitleBox from '../TitleBox/TitleBox'
+import Link from 'next/link'
 import { FiExternalLink, FiGithub, FiCode } from 'react-icons/fi'
 
 export default function ProjectsSection() {
@@ -83,15 +84,8 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* Brief experience mention */}
-        <div className="experienceMention">
-          <p>
-            Currently working as <strong>Full Stack Developer</strong> at{' '}
-            <a href="http://efendim.io" target="_blank" rel="noopener noreferrer">
-              Efendim.io
-            </a>
-            {' '}• Building modern web applications with React.js and Node.js
-          </p>
+        <div className="projectsFooter">
+          <Link href="/projects" className="viewAllButton">View all projects</Link>
         </div>
       </div>
     </section>

@@ -228,7 +228,8 @@
         background-repeat: no-repeat;
         opacity: 0.15;
         pointer-events: none;
-        transform: translateX(10%);
+        // transform: translateX(10%);
+        transform: rotateZ(317deg) translateX(15%);
     }
 
     @media screen and (max-width: #{vars.$bp-md}) {
