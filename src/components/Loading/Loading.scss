@@ -1,0 +1,36 @@
+.site-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  color: var(--muted);
+}
+
+.spinner {
+  border-radius: 50%;
+  border: 4px solid rgba(0,0,0,0.08);
+  border-top-color: var(--brand);
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+.loadingText {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Dark theme tweaks */
+[data-theme="dark"] .site-loading {
+  color: var(--muted);
+}
+
+[data-theme="dark"] .spinner {
+  border: 4px solid rgba(255,255,255,0.06);
+  border-top-color: var(--brand);
+}
