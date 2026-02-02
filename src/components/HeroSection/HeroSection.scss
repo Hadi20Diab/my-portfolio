@@ -68,23 +68,31 @@
             gap: 0.75rem;
             margin-top: vars.$space-lg;
 
-            .icon {
-                width: 2.25rem;
-                height: 2.25rem;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                background: rgba(0, 0, 0, 0.04);
-                border-radius: 6px;
-                color: var(--text);
-                transition: background vars.$transition-fast ease, color vars.$transition-fast ease, transform vars.$transition-fast ease;
-            }
+                .icon {
+                    width: 2.6rem;
+                    height: 2.6rem;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(0,0,0,0.04);
+                    border-radius: 8px;
+                    color: var(--text);
+                    transition: background vars.$transition-fast ease, color vars.$transition-fast ease, transform vars.$transition-fast ease;
 
-            .icon:hover {
-                background: var(--brand);
-                color: var(--bg);
-                transform: translateY(-3px);
-            }
+                    /* ensure SVG icons inherit currentColor */
+                    svg {
+                        display: block;
+                        width: 1.1rem;
+                        height: 1.1rem;
+                        color: inherit;
+                    }
+                }
+
+                .icon:hover {
+                    background: var(--brand);
+                    color: var(--bg);
+                    transform: translateY(-3px);
+                }
         }
     }
 
