@@ -50,17 +50,36 @@
 
             &::before,
             &::after {
-                content: '';
-                display: inline-block;
-                width: 2px;
-                height: 28px;
-                background: rgba(0,0,0,0.3);
-                vertical-align: middle;
-                margin: 0 0.8rem;
+                content: "";
+                position: absolute;
+                display: block;
+                border: 0 solid transparent;
+                width: 0%;
+                height: 0%;
+                transition: all 0.3s ease;
+            }
+
+            &::after {
+                top: 0;
+                left: 0;
+                border-top: 2px solid transparent;
+                border-left: 2px solid transparent;
+            }
+
+            &::before {
+                right: 0;
+                bottom: 0;
+                border-bottom: 2px solid transparent;
+                border-right: 2px solid transparent;
             }
 
             &:hover {
-                color: var(--brand);
+                &::before,
+                &::after {
+                    width: 10px;
+                    height: 10px;
+                    border-color: var(--brand);
+                }
             }
         }
     }
