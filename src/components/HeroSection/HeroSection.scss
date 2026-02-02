@@ -7,7 +7,6 @@
     overflow: hidden;
 
     .heroContant {
-        background: vars.$bg;
         padding: vars.$space-xxl vars.$space-xl;
         max-width: vars.$container-max;
         margin: 0 auto;
@@ -53,7 +52,7 @@
             margin: 2.5rem 0 0.5rem 0;
             font-size: clamp(2rem, 6vw, 4rem);
             line-height: 1;
-            color: vars.$text;
+            color: var(--text);
         }
 
         >p+p {
