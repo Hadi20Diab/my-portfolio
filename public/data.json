@@ -1,0 +1,85 @@
+{
+    "personal": {
+        "name": "Hadi Diab",
+        "title": "Front-end Developer / UI Designer",
+        "email": "hadidiab0@gmail.com",
+        "phone": "+961 70 918 569",
+        "location": "Lebanon",
+        "bio": "Passionate Computer Engineer with expertise in front-end development and UI design. Experienced in creating responsive web applications and user-centered design solutions.",
+        "tagline": "Hi, I am"
+    },
+    "socialLinks": {
+        "linkedin": "https://www.linkedin.com/in/hadi-diab-view/",
+        "github": "https://github.com/Hadi20Diab",
+        "email": "mailto:hadidiab0@gmail.com"
+    },
+    "skills": {
+        "technical": [
+            "JavaScript", "React.js", "Next.js", "Node.js", "Express.js",
+            "HTML5", "CSS3", "SCSS", "Tailwind CSS", "Bootstrap",
+            "MongoDB", "MySQL", "Git", "GitHub", "Figma", "Adobe XD"
+        ],
+        "languages": [
+            {"name": "Arabic", "level": "Native"},
+            {"name": "English", "level": "Fluent"},
+            {"name": "French", "level": "Intermediate"}
+        ]
+    },
+    "experience": [
+        {
+            "title": "Full Stack Developer",
+            "company": "Efendim.io",
+            "period": "2022 - Present",
+            "description": "Developed and maintained web applications using React.js and Node.js. Collaborated with design teams to implement user-friendly interfaces.",
+            "website": "http://efendim.io"
+        },
+        {
+            "title": "Frontend Developer",
+            "company": "Halal Education",
+            "period": "2021 - 2022",
+            "description": "Built responsive educational web applications. Focused on creating accessible and intuitive user experiences.",
+            "website": "https://dev.halal.education"
+        }
+    ],
+    "education": {
+        "degree": "Computer Engineering",
+        "institution": "Lebanese University",
+        "period": "2018 - 2022",
+        "description": "Focused on software engineering, web development, and computer systems."
+    },
+    "services": [
+        {
+            "title": "DESIGN",
+            "icon": "FiPenTool",
+            "description": "I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job."
+        },
+        {
+            "title": "DEVELOPMENT", 
+            "icon": "FiCode",
+            "description": "Full-stack web development using modern technologies. I build responsive, scalable applications with focus on performance and user experience."
+        },
+        {
+            "title": "MAINTENANCE",
+            "icon": "FiSettings", 
+            "description": "Ongoing support and maintenance for your web applications. Regular updates, bug fixes, and performance optimizations."
+        }
+    ],
+    "projects": [
+        {
+            "name": "Efendim Platform",
+            "description": "E-commerce platform built with React.js and Node.js",
+            "technologies": ["React.js", "Node.js", "MongoDB"],
+            "url": "http://efendim.io"
+        },
+        {
+            "name": "Halal Education Portal",
+            "description": "Educational web application for online learning",
+            "technologies": ["React.js", "Express.js", "MySQL"],
+            "url": "https://dev.halal.education"
+        }
+    ],
+    "resume": {
+        "filename": "Hadi Diab - Computer Engineer-Cirriculum Vitae.docx.pdf",
+        "path": "/Hadi Diab - Computer Engineer-Cirriculum Vitae.docx.pdf"
+    }
+}
