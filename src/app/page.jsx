@@ -1,11 +1,5 @@
-import AboutSection from "../components/AboutSection/AboutSection";
-import HeroSection from "../components/HeroSection/HeroSection";
+import HomeClient from '../components/HomeClient/HomeClient'
 
 export default function HomePage() {
-    return (
-        <>
-            <HeroSection />
-            <AboutSection />
-        </>
-    )
+    return <HomeClient />
 }

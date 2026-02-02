@@ -1,25 +1,31 @@
 "use client"
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './AboutSection.scss'
 import { FiPenTool, FiCode, FiSettings, FiBriefcase, FiBookOpen } from 'react-icons/fi'
 import { getPortfolioData } from '../../utils/data'
 import Loading from '../Loading/Loading'
+import useInView from '../../hooks/useInView'
 
 export default function AboutSection() {
     const [data, setData] = useState(null)
+    const containerRef = useRef(null)
+    const inView = useInView(containerRef, { rootMargin: '0px', threshold: 0.05 })
 
     useEffect(() => {
+        if (!inView || data) return
+        let mounted = true
         async function loadData() {
             const portfolioData = await getPortfolioData()
-            setData(portfolioData)
+            if (mounted) setData(portfolioData)
         }
         loadData()
-    }, [])
+        return () => { mounted = false }
+    }, [inView, data])
 
     if (!data) {
         return (
-            <section className="aboutSection">
+            <section className="aboutSection" ref={containerRef}>
                 <div className="aboutContainer">
                     <Loading />
                 </div>
@@ -34,7 +40,7 @@ export default function AboutSection() {
     }
 
     return (
-        <section className="aboutSection">
+        <section className="aboutSection" ref={containerRef}>
             <div className="aboutContainer">
                 <div className="aboutHeader">
                     <div className="titleBox">

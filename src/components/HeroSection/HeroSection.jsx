@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import './HeroSection.scss'
 import Link from 'next/link'
@@ -8,21 +8,27 @@ import { FiMail } from 'react-icons/fi'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
 import { getPortfolioData } from '../../utils/data'
 import Loading from '../Loading/Loading'
+import useInView from '../../hooks/useInView'
 
 export default function HeroSection() {
     const [data, setData] = useState(null)
+    const containerRef = useRef(null)
+    const inView = useInView(containerRef, { rootMargin: '0px', threshold: 0.05 })
 
     useEffect(() => {
+        if (!inView || data) return
+        let mounted = true
         async function loadData() {
             const portfolioData = await getPortfolioData()
-            setData(portfolioData)
+            if (mounted) setData(portfolioData)
         }
         loadData()
-    }, [])
+        return () => { mounted = false }
+    }, [inView, data])
 
     if (!data) {
         return (
-            <section className="heroContainer">
+            <section className="heroContainer" ref={containerRef}>
                 <div className="heroContant">
                     <Loading />
                 </div>
@@ -32,7 +38,7 @@ export default function HeroSection() {
 
     return (
         <>
-            <section className="heroContainer">
+            <section className="heroContainer" ref={containerRef}>
                 <div className="heroContant">
                     <p>{data.personal.tagline}</p>
                     <h1 className="heroTitle">
