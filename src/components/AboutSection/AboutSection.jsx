@@ -27,7 +27,7 @@ export default function AboutSection() {
 
     if (!data) {
         return (
-            <section className="aboutSection" ref={containerRef}>
+            <section id="aboutSection" className="aboutSection scroll-offset" ref={containerRef}>
                 <div className="aboutContainer">
                     <Loading />
                 </div>
