@@ -1,0 +1,30 @@
+@use '../../styles/variables' as vars;
+
+.educationSection {
+  margin-top: vars.$space-xxl;
+
+  .sectionTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: vars.$space-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: vars.$space-sm;
+    letter-spacing: 2px;
+  }
+
+  .educationCard {
+    background: rgba(0,0,0,0.02);
+    border: 2px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: vars.$space-lg;
+    max-width: 720px;
+    margin: 0 auto;
+
+    h4 { color: var(--brand); font-size: 1.1rem; margin-bottom: vars.$space-sm }
+    .institution { font-weight: 500; margin-bottom: vars.$space-xs }
+    .period { font-style: italic; color: var(--muted); margin-bottom: vars.$space-sm }
+  }
+}

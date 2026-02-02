@@ -1,0 +1,34 @@
+@use '../../styles/variables' as vars;
+
+.experienceSection {
+  margin-top: vars.$space-xxl;
+
+  .sectionTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: vars.$space-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: vars.$space-sm;
+    letter-spacing: 2px;
+  }
+
+  .experienceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: vars.$space-lg;
+  }
+
+  .experienceCard {
+    background: rgba(0,0,0,0.02);
+    border: 2px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: vars.$space-lg;
+
+    h4 { color: var(--brand); font-size: 1.1rem; margin-bottom: vars.$space-sm }
+    .company { font-weight: 500; margin-bottom: vars.$space-xs }
+    .period { font-style: italic; color: var(--muted); margin-bottom: vars.$space-sm }
+  }
+}

@@ -5,8 +5,9 @@ import './AboutSection.scss'
 import { FiPenTool, FiCode, FiSettings, FiBriefcase, FiBookOpen } from 'react-icons/fi'
 import { getPortfolioData } from '../../utils/data'
 import Loading from '../Loading/Loading'
-import BottomDivider from '../BottomDivider/BottomDivider'
+import BottomDivider from '../DecorativeDivider/DecorativeDivider'
 import useInView from '../../hooks/useInView'
+import DecorativeDivider from '../DecorativeDivider/DecorativeDivider'
 
 export default function AboutSection() {
     const [data, setData] = useState(null)
@@ -50,21 +51,12 @@ export default function AboutSection() {
                     <p className="aboutDescription">
                         {data.personal.bio}
                     </p>
-                    <div className="contactInfo">
-                        <p><strong>Email:</strong> {data.personal.email}</p>
-                        <p><strong>Phone:</strong> {data.personal.phone}</p>
-                        <p><strong>Location:</strong> {data.personal.location}</p>
-                    </div>
                     <a href={data.resume.path} target="_blank" className="exploreButton">
                         DOWNLOAD CV
                     </a>
                 </div>
 
-                <div className="decorativeDivider">
-                    <div className="dividerLine"></div>
-                    <div className="dividerPattern"></div>
-                    <div className="dividerLine"></div>
-                </div>
+                <DecorativeDivider />
 
                 <div className="servicesGrid">
                     {data.services.map((service, index) => {

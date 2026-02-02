@@ -84,30 +84,6 @@
         }
     }
 
-    .decorativeDivider {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: vars.$space-xxl 0;
-        gap: 1rem;
-
-        .dividerLine {
-            width: 60px;
-            height: 2px;
-            background: rgba(0, 0, 0, 0.15);
-        }
-
-        .dividerPattern {
-            width: 40px;
-            height: 8px;
-            background-image: repeating-linear-gradient(45deg,
-                    rgba(0, 0, 0, 0.15) 0px,
-                    rgba(0, 0, 0, 0.15) 2px,
-                    transparent 2px,
-                    transparent 6px);
-        }
-    }
-
     .servicesGrid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -171,16 +147,6 @@
         .servicesGrid {
             grid-template-columns: 1fr;
             gap: vars.$space-lg;
-        }
-
-        .decorativeDivider {
-            .dividerLine {
-                width: 40px;
-            }
-
-            .dividerPattern {
-                width: 30px;
-            }
         }
     }
 }
@@ -271,32 +237,6 @@
             }
         }
     }
-
-    .contactInfo {
-        background: rgba(0, 0, 0, 0.02);
-        border: 2px solid rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        padding: vars.$space-md;
-        margin: vars.$space-lg 0;
-        text-align: left;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-
-        p {
-            margin-bottom: vars.$space-xs;
-            font-size: 0.9rem;
-
-            strong {
-                color: var(--brand);
-                margin-right: vars.$space-xs;
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
 }
 
 /* Dark theme adjustments */
@@ -312,20 +252,6 @@
             }
         }
 
-        .decorativeDivider {
-            .dividerLine {
-                background: rgba(255, 255, 255, 0.15);
-            }
-
-            .dividerPattern {
-                background-image: repeating-linear-gradient(45deg,
-                        rgba(255, 255, 255, 0.15) 0px,
-                        rgba(255, 255, 255, 0.15) 2px,
-                        transparent 2px,
-                        transparent 6px);
-            }
-        }
-
         .experienceSection,
         .educationSection {
             .sectionTitle {
@@ -336,8 +262,8 @@
         }
 
         .experienceCard,
-        .educationCard,
-        .contactInfo {
+        .educationCard
+        {
             background: rgba(255, 255, 255, 0.03);
             border-color: rgba(255, 255, 255, 0.1);
 

@@ -1,0 +1,27 @@
+@use '../../styles/variables' as vars;
+
+.titleBox {
+  display: inline-block;
+  border: 3px solid var(--text);
+  padding: 1.2rem 3rem;
+  margin-bottom: vars.$space-xl;
+
+  h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: var(--text);
+  }
+}
+
+@media screen and (max-width: #{vars.$bp-md}) {
+  .titleBox {
+    padding: 1rem 2rem;
+
+    h2 {
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+  }
+}
