@@ -27,7 +27,7 @@ export default function WorkSection() {
     return (
       <section className="workSection" ref={ref}>
         <div className="workInner">
-          <Loading />
+          <Loading text='Loading Work...' />
         </div>
       </section>
     )

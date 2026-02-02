@@ -43,7 +43,7 @@
                 transition: color vars.$transition-fast ease-in-out, transform vars.$transition-fast ease-in-out;
 
                 &:hover {
-                    color: vars.$brand;
+                    color: var(--brand);
                     transform: translateY(-2px);
                 }
             }
@@ -75,13 +75,13 @@
 
         a {
             text-decoration: none;
-            color: #000;
+            color: vars.$muted-bg;
             font-size: 1.2rem;
             font-weight: 600;
             transition: all 0.3s ease-in-out;
 
             &:hover {
-                color: #fff;
+                color: var(--brand);
             }
         }
     }

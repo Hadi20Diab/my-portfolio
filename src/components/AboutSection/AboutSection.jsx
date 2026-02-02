@@ -28,7 +28,7 @@ export default function AboutSection() {
         return (
             <section id="aboutSection" className="aboutSection scroll-offset" ref={containerRef}>
                 <div className="aboutContainer">
-                    <Loading />
+                    <Loading text='Loading About...'/>
                 </div>
             </section>
         )

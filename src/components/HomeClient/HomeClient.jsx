@@ -13,7 +13,7 @@ const AboutSection = dynamic(() => import('../AboutSection/AboutSection'), {
   loading: () => <Loading />,
 })
 
-const WorkSection = dynamic(() => import('../WorkSection/WorkSection'), {
+const ProjectsSection = dynamic(() => import('../ProjectsSection/ProjectsSection'), {
   ssr: false,
   loading: () => <Loading />,
 })
@@ -23,7 +23,7 @@ export default function HomeClient() {
     <>
       <HeroSection />
       <AboutSection />
-      <WorkSection />
+      <ProjectsSection />
     </>
   )
 }
