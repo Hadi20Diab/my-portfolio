@@ -40,7 +40,7 @@ export default function Navbar() {
                 </div>
                 <nav className="navLinks">
                     <ul className="navList">
-                        <li><Link href="/">About me</Link></li>
+                        <li><Link href="/#aboutSection">About me</Link></li>
                         <li><Link href="/">Skills</Link></li>
                         <li><Link href="/">Portfolio</Link></li>
                         <li className="navButton"><Link href="/">CONTACT ME</Link></li>

@@ -42,7 +42,7 @@ export default function AboutSection() {
     }
 
     return (
-        <section className="aboutSection" ref={containerRef}>
+        <section id="aboutSection" className="aboutSection" ref={containerRef}>
             <div className="aboutContainer">
                 <div className="aboutHeader">
                     <div className="titleBox">
