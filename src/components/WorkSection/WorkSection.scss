@@ -1,0 +1,74 @@
+@use '../../styles/variables' as vars;
+
+.workSection {
+  background: transparent;
+  padding: vars.$space-xxl 0;
+
+  .workInner {
+    max-width: vars.$container-max;
+    margin: 0 auto;
+    padding: 0 vars.$space-xl;
+    text-align: left;
+  }
+
+  .workColumns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: vars.$space-xxl;
+    align-items: start;
+    margin-top: vars.$space-lg;
+  }
+
+  .leftCol { }
+
+  .subTitle {
+    font-size: 0.95rem;
+    color: var(--brand);
+    margin-bottom: vars.$space-md;
+  }
+
+  .timeline {
+    border-left: 2px dashed rgba(0,0,0,0.06);
+    padding-left: vars.$space-lg;
+    display: flex;
+    flex-direction: column;
+    gap: vars.$space-lg;
+  }
+
+  .timelineItem {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 4px rgba(0,0,0,0.03);
+    }
+
+    .meta { font-weight: 600; color: var(--text); }
+    .period { display: block; font-size: 0.85rem; color: var(--muted); }
+    h4 { margin: 0.25rem 0; color: var(--brand) }
+    p { margin: 0; color: var(--muted) }
+  }
+
+  .rightCol {
+    .eduCard {
+      background: rgba(0,0,0,0.02);
+      border: 1px solid rgba(0,0,0,0.06);
+      padding: vars.$space-lg;
+      border-radius: vars.$radius-md;
+      h4 { color: var(--brand); margin-bottom: vars.$space-sm }
+    }
+  }
+
+  @media screen and (max-width: #{vars.$bp-md}) {
+    .workColumns {
+      grid-template-columns: 1fr;
+    }
+  }
+}
