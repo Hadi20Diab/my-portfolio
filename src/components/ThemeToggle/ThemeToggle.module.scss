@@ -1,16 +1,29 @@
-.toggle{
+@import '../../styles/variables.scss';
+
+.toggle {
   background: transparent;
   border: none;
   color: var(--text);
   cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
   font-size: 1rem;
   line-height: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background var(--transition-base, 300ms) ease, color var(--transition-base, 300ms) ease;
-}
+  border-radius: 8px;
+  transition: background var(--transition-base, 300ms) ease, color var(--transition-base, 300ms) ease, transform var(--transition-fast, 150ms) ease;
 
-.toggle:hover{
-  background: rgba(0,0,0,0.04);
+  &:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+
+  svg {
+    display: block;
+    width: 1.1rem;
+    height: 1.1rem;
+    color: $muted-bg;
+  }
 }

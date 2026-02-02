@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import styles from './ThemeToggle.module.scss'
+import { FiSun, FiMoon } from 'react-icons/fi'
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState(() => {
@@ -19,8 +20,9 @@ export default function ThemeToggle() {
       className={styles.toggle}
       onClick={() => setTheme(prev => prev === 'light' ? 'dark' : 'light')}
       aria-label="Toggle theme"
+      aria-pressed={theme === 'dark'}
     >
-      {theme === 'light' ? '🌞' : '🌙'}
+      {theme === 'light' ? <FiSun aria-hidden size={18} /> : <FiMoon aria-hidden size={18} />}
     </button>
   )
 }
