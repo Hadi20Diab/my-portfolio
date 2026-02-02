@@ -71,8 +71,6 @@ export default function AboutSection() {
                         )
                     })}
                 </div>
-
-                <DecorativeDivider />
             </div>
         </section>
     )
