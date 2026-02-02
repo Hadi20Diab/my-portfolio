@@ -1,5 +1,6 @@
 "use client"
 import './AboutSection.scss'
+import { FiPenTool, FiCode, FiSettings } from 'react-icons/fi'
 
 export default function AboutSection() {
     return (
@@ -25,18 +26,27 @@ export default function AboutSection() {
 
                 <div className="servicesGrid">
                     <div className="serviceCard">
+                        <div className="serviceIcon" aria-hidden>
+                            <FiPenTool />
+                        </div>
                         <h3>DESIGN</h3>
                         <p>
                             I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.
                         </p>
                     </div>
                     <div className="serviceCard">
+                        <div className="serviceIcon" aria-hidden>
+                            <FiCode />
+                        </div>
                         <h3>DEVELOPMENT</h3>
                         <p>
                             I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.
                         </p>
                     </div>
                     <div className="serviceCard">
+                        <div className="serviceIcon" aria-hidden>
+                            <FiSettings />
+                        </div>
                         <h3>MAINTENANCE</h3>
                         <p>
                             I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.

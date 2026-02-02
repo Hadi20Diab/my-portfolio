@@ -101,6 +101,20 @@
         .serviceCard {
             text-align: center;
             padding: vars.$space-lg;
+            position: relative;
+
+            .serviceIcon {
+                width: 48px;
+                height: 48px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto vars.$space-sm auto;
+                background: rgba(0,0,0,0.04);
+                border-radius: 8px;
+                color: var(--text);
+                opacity: 0.18;
+            }
 
             h3 {
                 margin: 0 0 vars.$space-md 0;
