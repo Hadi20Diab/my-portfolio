@@ -1,10 +1,10 @@
 "use client"
 
-import './BottomDivider.scss'
+import './DecorativeDivider.scss'
 
-export default function BottomDivider({ className = '' }) {
+export default function DecorativeDivider({ className = '' }) {
   return (
-    <div className={`bottomDivider ${className}`}>
+    <div className={`DecorativeDivider ${className}`}>
       <div className="dividerLine" />
       <div className="dividerPattern" />
       <div className="dividerLine" />
