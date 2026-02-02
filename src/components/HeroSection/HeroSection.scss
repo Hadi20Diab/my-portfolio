@@ -3,8 +3,7 @@
 .heroContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    min-height: 80vh;
+    align-items: center;    
     overflow: hidden;
 
     .heroContant {
@@ -37,39 +36,30 @@
             display: flex;
             gap: vars.$space-md;
             margin-top: vars.$space-xxl;
-            .btn {
-                display: inline-flex;
-                align-items: center;
-                gap: 0.6rem;
-                text-decoration: none;
-                padding: 0.6rem 1rem;
-                border-radius: vars.$radius-md;
+            align-items: center;
+
+            .ctaOutline {
+                display: inline-block;
+                padding: 0.9rem 2.5rem;
+                border: 2px solid var(--text);
                 color: var(--text);
+                text-decoration: none;
+                font-weight: 700;
+                letter-spacing: 2px;
+                border-radius: 6px;
                 background: transparent;
-                border: 1px solid rgba(0, 0, 0, 0.08);
-                transition: transform vars.$transition-fast, box-shadow vars.$transition-fast, background vars.$transition-fast;
+                transition: background vars.$transition-fast ease, color vars.$transition-fast ease;
             }
 
-            .btn-primary {
+            .ctaPrimary {
+                display: inline-block;
+                padding: 0.6rem 1.25rem;
                 background: var(--brand);
                 color: var(--bg);
-                border-color: transparent;
-            }
-
-            .btn:hover {
-                transform: translateY(-3px);
-                box-shadow: vars.$shadow-sm;
-            }
-
-            .btn-icon {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                color: currentColor;
-            }
-
-            .btn-text{
+                border-radius: 999px;
+                text-decoration: none;
                 font-weight: 600;
+                transition: transform vars.$transition-fast ease, box-shadow vars.$transition-fast ease;
             }
         }
 
@@ -79,21 +69,21 @@
             margin-top: vars.$space-lg;
 
             .icon {
-                width: 2.4rem;
-                height: 2.4rem;
+                width: 2.25rem;
+                height: 2.25rem;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 background: rgba(0, 0, 0, 0.04);
-                border-radius: 8px;
+                border-radius: 6px;
                 color: var(--text);
-                transition: transform vars.$transition-fast, background vars.$transition-fast, color vars.$transition-fast;
+                transition: background vars.$transition-fast ease, color vars.$transition-fast ease, transform vars.$transition-fast ease;
             }
 
             .icon:hover {
+                background: var(--brand);
+                color: var(--bg);
                 transform: translateY(-3px);
-                background: rgba(0,0,0,0.08);
-                color: var(--brand);
             }
         }
     }
@@ -116,8 +106,8 @@
 
         .portrait {
             position: relative;
-            max-width: 50%;
             height: auto;
+            margin-bottom: -0.2rem;
 
             img {
                 position: static !important;
