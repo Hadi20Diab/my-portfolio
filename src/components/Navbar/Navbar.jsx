@@ -41,9 +41,9 @@ export default function Navbar() {
                 <nav className="navLinks">
                     <ul className="navList">
                         <li><Link href="#aboutSection">About me</Link></li>
-                        <li><Link href="/">Skills</Link></li>
-                        <li><Link href="/">Portfolio</Link></li>
-                        <li className="navButton"><Link href="/">CONTACT ME</Link></li>
+                        <li><Link href="#skillsSection">Skills</Link></li>
+                        <li><Link href="/projects">Portfolio</Link></li>
+                        <li className="navButton"><Link href="/contact">CONTACT ME</Link></li>
                         <ThemeToggle />
                     </ul>
                 </nav>
