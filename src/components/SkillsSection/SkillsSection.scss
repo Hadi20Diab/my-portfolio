@@ -10,6 +10,38 @@
     text-align: center;
   }
 
+  .skillsTabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: vars.$space-sm;
+    margin: vars.$space-lg 0 vars.$space-md;
+  }
+
+  .skillsTab {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 7px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: var(--transition-base);
+    font-family: inherit;
+
+    &:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+    }
+
+    &.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+    }
+  }
+
   .skillsControls {
     display: block;
     margin-top: vars.$space-lg;

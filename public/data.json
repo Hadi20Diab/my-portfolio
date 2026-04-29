@@ -5,7 +5,7 @@
         "email": "hadidiab33@gmail.com",
         "phone": "+961 70 918 569",
         "location": "Lebanon",
-        "bio": "Passionate Computer Engineer with expertise in front-end development and UI design. Experienced in creating responsive web applications and user-centered design solutions.",
+        "bio": "Computer Engineer passionate about building fast, beautiful, and accessible web products. I work across the full stack — from pixel-perfect React/Next.js frontends to robust Node.js, Django, and FastAPI backends — and I care deeply about both developer experience and end-user experience.",
         "tagline": "Hi, I am"
     },
     "socialLinks": {
@@ -14,11 +14,33 @@
         "email": "mailto:hadidiab33@gmail.com"
     },
     "skills": {
-        "technical": [
-            "JavaScript", "React.js", "Next.js", "Node.js", "Express.js",
-            "HTML5", "CSS3", "SCSS", "Tailwind CSS", "Bootstrap",
-            "MongoDB", "MySQL", "Git", "GitHub", "Figma", "Adobe XD"
+        "categories": [
+            {
+                "label": "Frontend",
+                "items": ["JavaScript", "TypeScript", "React.js", "Next.js", "HTML5", "CSS3", "SCSS", "Tailwind CSS", "Bootstrap", "Angular"]
+            },
+            {
+                "label": "Backend",
+                "items": ["Node.js", "Express.js", "Python", "Django", "FastAPI", "REST API", "GraphQL"]
+            },
+            {
+                "label": "Database",
+                "items": ["MongoDB", "MySQL", "PostgreSQL", "Supabase", "Firebase"]
+            },
+            {
+                "label": "Tools & DevOps",
+                "items": ["Git", "GitHub", "Docker", "Vercel", "Postman", "VS Code"]
+            },
+            {
+                "label": "Design",
+                "items": ["Figma", "Adobe XD", "UI/UX Design", "Responsive Design"]
+            },
+            {
+                "label": "AI & ML",
+                "items": ["OpenAI API", "LangChain", "Pinecone", "Vector Search", "Prompt Engineering", "Embeddings", "Gemini"]
+            }
         ],
+        "technical": ["JavaScript", "TypeScript", "React.js", "Next.js", "Angular", "Node.js", "Express.js", "Python", "Django", "FastAPI", "HTML5", "CSS3", "SCSS", "Tailwind CSS", "Bootstrap", "MongoDB", "MySQL", "PostgreSQL", "Supabase", "Firebase", "Git", "GitHub", "Docker", "Figma", "Adobe XD", "OpenAI API", "LangChain", "Pinecone", "Vector Search"],
         "languages": [
             {"name": "Arabic", "level": "Native"},
             {"name": "English", "level": "Fluent"},
@@ -51,32 +73,66 @@
         {
             "title": "DESIGN",
             "icon": "FiPenTool",
-            "description": "I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job."
+            "description": "I craft pixel-perfect, user-centered interfaces based on your brand. From wireframes to polished UI — every detail matters."
         },
         {
-            "title": "DEVELOPMENT", 
+            "title": "DEVELOPMENT",
             "icon": "FiCode",
-            "description": "Full-stack web development using modern technologies. I build responsive, scalable applications with focus on performance and user experience."
+            "description": "Full-stack web development using React, Next.js, Node.js, Django and more. Scalable, performant, production-ready applications."
         },
         {
             "title": "MAINTENANCE",
-            "icon": "FiSettings", 
-            "description": "Ongoing support and maintenance for your web applications. Regular updates, bug fixes, and performance optimizations."
+            "icon": "FiSettings",
+            "description": "Ongoing support, bug fixes, security patches and performance monitoring so your product stays fast and reliable."
         }
     ],
     "projects": [
         {
+            "name": "LUXE — E-Commerce",
+            "tagline": "Full-stack fashion marketplace",
+            "description": "A fully-featured WooCommerce-style e-commerce platform with product browsing, cart, Stripe & PayPal checkout, user accounts, and a Django admin panel. Built with Next.js 14 App Router frontend and Django 5 + DRF backend.",
+            "technologies": ["Next.js", "Django", "DRF", "Stripe", "PayPal", "SQLite", "JWT"],
+            "url": "https://luxe--commerce.vercel.app/",
+            "github": "https://github.com/Hadi20Diab/e-commerce-django",
+            "featured": true,
+            "category": "Full Stack"
+        },
+        {
+            "name": "Trackify — Task Board",
+            "tagline": "Kanban project management tool",
+            "description": "A Jira/Trello-inspired task management dashboard with drag-and-drop Kanban boards, real-time updates, user authentication and protected workspace routes. Built with Angular (standalone), FastAPI backend and Supabase.",
+            "technologies": ["Angular", "FastAPI", "Supabase", "PostgreSQL", "CDK D&D", "Python"],
+            "url": "https://trackify-board.vercel.app",
+            "github": "https://github.com/Hadi20Diab/trackify",
+            "featured": true,
+            "category": "Full Stack"
+        },
+        {
             "name": "Efendim Platform",
-            "description": "E-commerce platform built with React.js and Node.js",
-            "technologies": ["React.js", "Node.js", "MongoDB"],
-            "url": "http://efendim.io"
+            "tagline": "AI-powered multi-channel chatbot platform",
+            "description": "Production AI chatbot platform for Efendim.io. Handles multi-channel conversations (WhatsApp, Instagram, Telegram), uses Pinecone vector search for intelligent knowledge retrieval, Firebase for real-time state and auth, Supabase for structured data, and OpenAI/LangChain for LLM-powered responses. Features human escalation, webhooks and full API integrations.",
+            "technologies": ["Next.js", "Firebase", "Pinecone", "Supabase", "OpenAI", "LangChain", "PostgreSQL"],
+            "url": "http://efendim.io",
+            "github": "",
+            "featured": true,
+            "category": "AI Platform"
         },
         {
             "name": "Halal Education Portal",
-            "description": "Educational web application for online learning",
+            "tagline": "Online learning platform",
+            "description": "Educational web application for online learning management. Focused on creating accessible, intuitive user experiences for students and instructors.",
             "technologies": ["React.js", "Express.js", "MySQL"],
-            "url": "https://dev.halal.education"
+            "url": "https://dev.halal.education",
+            "github": "",
+            "featured": true,
+            "category": "Full Stack"
         }
+    ],
+    "stats": [
+        { "value": "3+", "label": "Years of Experience" },
+        { "value": "10+", "label": "Projects Delivered" },
+        { "value": "15+", "label": "Technologies" },
+        { "value": "100%", "label": "Client Satisfaction" }
     ],
     "resume": {
         "filename": "Hadi Diab - Computer Engineer-Cirriculum Vitae.docx.pdf",

@@ -12,7 +12,7 @@
 
   .projectsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: vars.$space-xl;
     margin: vars.$space-xxl 0;
   }
@@ -50,15 +50,22 @@
       }
     }
 
+    .projectCardTop {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: vars.$space-lg;
+    }
+
     .projectHeader {
       display: flex;
-      align-items: center;
-      gap: vars.$space-md;
-      margin-bottom: vars.$space-lg;
+      align-items: flex-start;
+      gap: vars.$space-sm;
+      flex: 1;
 
       .projectIcon {
-        width: 48px;
-        height: 48px;
+        width: 44px;
+        height: 44px;
         background: var(--brand);
         border-radius: vars.$radius-md;
         display: flex;
@@ -66,20 +73,47 @@
         justify-content: center;
         color: white;
         flex-shrink: 0;
-
-        svg {
-          width: 20px;
-          height: 20px;
-        }
+        svg { width: 18px; height: 18px; }
       }
 
       h3 {
-        margin: 0;
-        font-size: 1.25rem;
-        font-weight: 600;
+        margin: 0 0 2px 0;
+        font-size: 1.1rem;
+        font-weight: 700;
         color: var(--text);
         line-height: 1.2;
       }
+
+      .projectTagline {
+        font-size: 0.8rem;
+        color: var(--muted);
+        font-weight: 400;
+      }
+    }
+
+    .featuredBadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--brand);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+      svg { width: 11px; height: 11px; }
+    }
+
+    .categoryBadge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--brand);
+      background: rgba(0,112,243,0.08);
+      padding: 3px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+      align-self: flex-end;
     }
 
     .projectDescription {

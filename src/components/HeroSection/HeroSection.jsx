@@ -47,8 +47,8 @@ export default function HeroSection() {
                     <p>{data.personal.title}</p>
 
                     <div className="heroButtons">
-                        {/* <a href="#about" className="ctaOutline" aria-label="About me">ABOUT ME</a>
-                        <a href="#contact" className="ctaPrimary" aria-label="Contact me">CONTACT ME</a> */}
+                        <a href="#aboutSection" className="ctaOutline" aria-label="About me">ABOUT ME</a>
+                        <Link href="/contact" className="ctaPrimary" aria-label="Contact me">CONTACT ME</Link>
                     </div>
 
                     <div className="socials" aria-label="Social links">
@@ -66,7 +66,7 @@ export default function HeroSection() {
             <section className="heroFeature">
                 <div className="featureInner">
                     <div className="featureContent">
-                        <h2>IT BERRIES</h2>
+                        <h2>{data.personal.name}</h2>
                         <p>
                             {data.personal.bio}
                         </p>

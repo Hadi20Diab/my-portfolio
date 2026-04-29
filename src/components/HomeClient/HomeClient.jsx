@@ -13,6 +13,11 @@ const AboutSection = dynamic(() => import('../AboutSection/AboutSection'), {
   loading: () => <Loading text="Loading about" />,
 })
 
+const StatsSection = dynamic(() => import('../StatsSection/StatsSection'), {
+  ssr: false,
+  loading: () => <Loading text="Loading stats" />,
+})
+
 const SkillsSection = dynamic(() => import('../SkillsSection/SkillsSection'), {
   ssr: false,
   loading: () => <Loading text="Loading skills" />,
@@ -23,13 +28,20 @@ const ProjectsSection = dynamic(() => import('../ProjectsSection/ProjectsSection
   loading: () => <Loading text="Loading projects" />,
 })
 
+const ExperienceSection = dynamic(() => import('../ExperienceSection/ExperienceSection'), {
+  ssr: false,
+  loading: () => <Loading text="Loading experience" />,
+})
+
 export default function HomeClient() {
   return (
     <>
       <HeroSection />
       <AboutSection />
+      <StatsSection />
       <SkillsSection />
       <ProjectsSection />
+      <ExperienceSection />
     </>
   )
 }
