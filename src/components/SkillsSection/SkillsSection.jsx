@@ -13,6 +13,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import SwiperCore from 'swiper'
+
+// initialize required modules for this Swiper instance
+SwiperCore.use([Navigation, Autoplay])
 
 // icons for skills
 import {
@@ -100,7 +104,6 @@ export default function SkillsSection() {
 
         <div className="skillsControls">
           <Swiper
-            modules={[Navigation, Autoplay]}
             navigation
             autoplay={{ delay: 2800, disableOnInteraction: true }}
             spaceBetween={12}
