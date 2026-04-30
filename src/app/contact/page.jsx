@@ -58,7 +58,7 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="contactPage">
+    <section className="contactPage">
       <div className="contactContainer">
 
         {/* Left — info */}
@@ -171,6 +171,6 @@ export default function ContactPage() {
         </div>
 
       </div>
-    </main>
+    </section>
   )
 }

@@ -2,7 +2,7 @@
 
 .contactPage {
   min-height: 100vh;
-  padding: vars.$space-xxl vars.$space-xl;
+  padding: 0 vars.$space-xl;
   display: flex;
   align-items: center;
 }
@@ -139,7 +139,7 @@
     outline: none;
     transition: var(--transition-base);
     resize: none;
-    width: 100%;
+    width: -webkit-fill-available;
 
     &::placeholder { color: var(--muted); opacity: 0.6; }
 
