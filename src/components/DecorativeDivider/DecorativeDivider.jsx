@@ -1,7 +1,5 @@
 "use client"
 
-import './DecorativeDivider.scss'
-
 export default function DecorativeDivider({ className = '' }) {
   return (
     <div className={`DecorativeDivider ${className}`}>

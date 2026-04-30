@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from 'react'
-import './contact.scss'
 import { FiSend, FiUser, FiMail, FiMessageSquare, FiTag, FiCheckCircle, FiAlertCircle } from 'react-icons/fi'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
 

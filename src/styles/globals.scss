@@ -70,3 +70,18 @@ main {
   gap: vars.$section-spacing;
   text-align: center;
 }
+
+/* ── Component styles bundled here to avoid HMR style-drop ─────────────── */
+@import '../components/Navbar/Navbar.scss';
+@import '../components/HeroSection/HeroSection.scss';
+@import '../components/AboutSection/AboutSection.scss';
+@import '../components/StatsSection/StatsSection.scss';
+@import '../components/SkillsSection/SkillsSection.scss';
+@import '../components/ProjectsSection/ProjectsSection.scss';
+@import '../components/ExperienceSection/ExperienceSection.scss';
+@import '../components/Footer/Footer.scss';
+@import '../components/ScrollToTop/ScrollToTop.scss';
+@import '../components/TitleBox/TitleBox.scss';
+@import '../components/Loading/Loading.scss';
+@import '../components/DecorativeDivider/DecorativeDivider.scss';
+@import '../app/contact/contact.scss';

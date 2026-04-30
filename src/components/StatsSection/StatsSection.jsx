@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from 'react'
-import './StatsSection.scss'
 import { getPortfolioData } from '../../utils/data'
 import useInView from '../../hooks/useInView'
 

@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from 'react'
-import './ScrollToTop.scss'
 import { FiArrowUp } from 'react-icons/fi'
 
 export default function ScrollToTop() {

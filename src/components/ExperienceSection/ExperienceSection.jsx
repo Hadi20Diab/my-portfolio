@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from 'react'
-import './ExperienceSection.scss'
 import { getPortfolioData } from '../../utils/data'
 import useInView from '../../hooks/useInView'
 import TitleBox from '../TitleBox/TitleBox'

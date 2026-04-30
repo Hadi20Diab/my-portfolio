@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
-import './HeroSection.scss'
 import Link from 'next/link'
 import { FiMail } from 'react-icons/fi'
 import { SiGithub, SiLinkedin } from 'react-icons/si'

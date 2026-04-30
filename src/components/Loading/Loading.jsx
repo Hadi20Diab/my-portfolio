@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import './Loading.scss'
 
 export default function Loading({ text = 'Loading...', size = 64, fullScreen = false }) {
     const [theme, setTheme] = useState('light')

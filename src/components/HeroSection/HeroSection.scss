@@ -4,12 +4,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    // overflow: hidden;
     position: relative;
-    min-height: 70vh;
+    min-height: 100vh;
+    overflow: hidden;
 
     .heroContant {
         padding: vars.$space-xxl vars.$space-xl;
+        padding-top: calc(3.5rem + #{vars.$space-xxl});
         max-width: vars.$container-max;
         margin: 0 auto;
         text-align: left;
@@ -131,19 +132,18 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        /* prominent angled divider — matches template */
         clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
         z-index: 1;
         overflow: hidden;
 
         .portrait {
             // position: relative;
-            // width: 85%;
-            // height: 95%;
+            // width: 80%;
+            // height: 90%;
 
             img {
-                object-fit: contain;
-                object-position: bottom center;
+                object-fit: contain !important;
+                object-position: bottom center !important;
                 width: auto;
                 height: auto;
             }
@@ -174,10 +174,16 @@
             padding-top: 0;
             top: auto;
             right: auto;
+
+            .portrait {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         .heroContant {
             padding: vars.$space-xl vars.$space-lg;
+            padding-top: calc(3.5rem + #{vars.$space-xl});
             text-align: center;
             width: 100%;
 
@@ -208,7 +214,8 @@
                 align-items: center;
                 gap: vars.$space-sm;
 
-                .ctaOutline, .ctaPrimary {
+                .ctaOutline,
+                .ctaPrimary {
                     width: 100%;
                     text-align: center;
                 }

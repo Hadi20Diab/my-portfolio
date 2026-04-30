@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from 'react'
-import './AboutSection.scss'
 import { FiPenTool, FiCode, FiSettings } from 'react-icons/fi'
 import { getPortfolioData } from '../../utils/data'
 import Loading from '../Loading/Loading'

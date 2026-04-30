@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import './Footer.scss'
 import { FiMail, FiHeart } from 'react-icons/fi'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
 

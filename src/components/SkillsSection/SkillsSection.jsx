@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from 'react'
-import './SkillsSection.scss'
 import { getPortfolioData } from '../../utils/data'
 import Loading from '../Loading/Loading'
 import useInView from '../../hooks/useInView'

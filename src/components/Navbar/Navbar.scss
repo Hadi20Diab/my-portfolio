@@ -1,18 +1,19 @@
 @use '../../styles/variables' as vars;
 
 .navContainer {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: vars.$space-lg vars.$space-xxl;
-    // padding: vars.$space-lg var(--space-xxl);
-    height: 3rem;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // z-index: 100000;
+    padding: vars.$space-md vars.$space-xxl;
     height: 3.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
     .logoDiv {
         width: 3.5rem;

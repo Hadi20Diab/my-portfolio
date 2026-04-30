@@ -5,7 +5,6 @@ import TitleBox from '../../../components/TitleBox/TitleBox'
 import Loading from '../../../components/Loading/Loading'
 import { getPortfolioData } from '../../../utils/data'
 import { FiExternalLink, FiGithub, FiCode, FiStar } from 'react-icons/fi'
-import '../../../components/ProjectsSection/ProjectsSection.scss'
 
 export default function ProjectsPage() {
   const [data, setData] = useState(null)
