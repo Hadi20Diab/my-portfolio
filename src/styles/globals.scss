@@ -51,6 +51,27 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Custom scrollbar styles */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand) var(--muted-bg);
+}
+
+/* For Webkit-based browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--brand);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--muted-bg);
+}
+
 /* Utility: sections that should account for a fixed nav height */
 .scroll-offset {
   scroll-margin-top: var(--nav-height);
