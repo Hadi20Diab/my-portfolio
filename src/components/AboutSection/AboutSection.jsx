@@ -42,7 +42,7 @@ export default function AboutSection() {
     return (
         <section id="aboutSection" className="aboutSection" ref={containerRef}>
             <div className="aboutContainer">
-                <div className="aboutHeader">
+                {/* <div className="aboutHeader">
                     <div className="titleBox">
                         <h2>ABOUT ME</h2>
                     </div>
@@ -54,7 +54,8 @@ export default function AboutSection() {
                     </a>
                 </div>
 
-                <DecorativeDivider />
+                <DecorativeDivider /> 
+                */}
 
                 <div className="servicesGrid">
                     {data.services.map((service, index) => {
