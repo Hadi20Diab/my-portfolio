@@ -137,15 +137,13 @@
         overflow: hidden;
 
         .portrait {
-            // position: relative;
-            // width: 80%;
-            // height: 90%;
+            position: relative;
+            width: 85%;
+            height: 95%;
 
             img {
                 object-fit: contain !important;
                 object-position: bottom center !important;
-                width: 100%;
-                height: 100%;
             }
         }
     }
@@ -167,23 +165,30 @@
         .heroImage {
             position: relative;
             width: 100%;
-            min-height: 50vw;
-            max-height: 380px;
+            height: 70vw;
+            max-height: 420px;
+            min-height: 260px;
             clip-path: none;
             z-index: 0;
-            padding-top: 0;
+            padding-top: 3.5rem; /* space for fixed navbar */
             top: auto;
             right: auto;
+            align-items: center;
+            justify-content: center;
 
             .portrait {
-                width: 100%;
+                position: relative;
+                width: 70%;
                 height: 100%;
+
+                img {
+                    object-position: top center !important;
+                }
             }
         }
 
         .heroContant {
             padding: vars.$space-xl vars.$space-lg;
-            padding-top: calc(3.5rem + #{vars.$space-xl});
             text-align: center;
             width: 100%;
 
@@ -199,11 +204,13 @@
 
     @media screen and (max-width: 480px) {
         .heroImage {
-            max-height: 260px;
+            max-height: 300px;
+            height: 80vw;
         }
 
         .heroContant {
-            padding: vars.$space-lg vars.$space-md;
+            padding: vars.$space-xl vars.$space-md;
+            padding-top: vars.$space-lg;
 
             h1 {
                 font-size: clamp(1.7rem, 9vw, 2.5rem);

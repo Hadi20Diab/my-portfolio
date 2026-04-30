@@ -86,7 +86,6 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: vars.$space-xl;
-        margin: vars.$space-xxl 0;
 
         .serviceCard {
             text-align: center;

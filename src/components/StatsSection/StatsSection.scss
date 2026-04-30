@@ -7,7 +7,7 @@
 .statsInner {
   max-width: vars.$container-max;
   margin: 0 auto;
-  padding: vars.$space-xxl vars.$space-xl;
+  padding: 0 vars.$space-xl;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: vars.$space-lg;
