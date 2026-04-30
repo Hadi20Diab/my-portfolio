@@ -90,11 +90,11 @@ export default function SkillsSection() {
           <p className="skillsLead">
             A practical stack shaped by product work across frontend, backend, AI, and delivery.
           </p>
-          <div className="skillsMeta" aria-label="Skills overview">
+          {/* <div className="skillsMeta" aria-label="Skills overview">
             <span className="skillsMetaItem">{categories.length} categories</span>
             <span className="skillsMetaItem">{totalSkills} core skills</span>
             <span className="skillsMetaItem">Production-ready stack</span>
-          </div>
+          </div> */}
         </div>
 
         <div className="skillsTabs">
