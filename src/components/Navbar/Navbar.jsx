@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import ThemeToggle from '../ThemeToggle/ThemeToggle'
@@ -8,6 +9,9 @@ import ThemeToggle from '../ThemeToggle/ThemeToggle'
 export default function Navbar() {
     const [theme, setTheme] = useState('light')
     const [scrolled, setScrolled] = useState(false)
+    const pathname = usePathname()
+
+    const isHome = pathname === '/'
 
     useEffect(() => {
         if (typeof document === 'undefined') return
@@ -27,13 +31,18 @@ export default function Navbar() {
         }
     }, [])
 
-    // In light mode at top: logo should be light (visible on dark hero panel side)
-    // but we're on left side (light bg), so keep dark logo. Always correct.
     const atTop = !scrolled
     const logoSrc = theme === 'dark' ? '/logo-light.png' : '/logo-dark.png'
 
+    // Only hide links at top in light mode AND on the home page
+    const hideLinks = isHome && atTop && theme === 'light'
+
+    // Anchor links: if not on home page, navigate to home then anchor
+    const aboutHref = isHome ? '#aboutSection' : '/#aboutSection'
+    const skillsHref = isHome ? '#skillsSection' : '/#skillsSection'
+
     return (
-        <section className={`navContainer${scrolled ? ' scrolled' : ''}${atTop && theme === 'light' ? ' atTop' : ''}`}>
+        <section className={`navContainer${scrolled ? ' scrolled' : ''}${hideLinks ? ' atTop' : ''}`}>
             <div className="logoDiv">
                 <Link href="/">
                     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
@@ -43,8 +52,8 @@ export default function Navbar() {
             </div>
             <nav className="navLinks">
                 <ul className="navList">
-                    <li><Link href="#aboutSection">About me</Link></li>
-                    <li><Link href="#skillsSection">Skills</Link></li>
+                    <li><Link href={aboutHref}>About me</Link></li>
+                    <li><Link href={skillsHref}>Skills</Link></li>
                     <li><Link href="/projects">Projects</Link></li>
                     <li className="navButton"><Link href="/contact">CONTACT ME</Link></li>
                     <ThemeToggle />

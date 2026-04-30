@@ -56,6 +56,14 @@ html {
   scroll-margin-top: var(--nav-height);
 }
 
+/* All anchor targets offset by nav height */
+#aboutSection,
+#skillsSection,
+#projectsSection,
+#experienceSection {
+  scroll-margin-top: 4rem;
+}
+
 body {
   margin: 0;
   font-family: vars.$font-stack;
