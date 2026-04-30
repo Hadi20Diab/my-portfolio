@@ -49,18 +49,25 @@
     },
     "experience": [
         {
-            "title": "Full Stack Developer",
-            "company": "Efendim.io",
-            "period": "2022 - Present",
-            "description": "Developed and maintained web applications using React.js and Node.js. Collaborated with design teams to implement user-friendly interfaces.",
-            "website": "http://efendim.io"
+            "title": "Full Stack Web Development Intern",
+            "company": "Digital Hub, Siblen, Lebanon, Hybrid",
+            "period": "Jan 2026 - May 2026",
+            "description": "Built and deployed full-stack web applications using Next.js, React, and Node.js, delivering scalable and user-focused solutions. Designed and developed RESTful APIs with Express.js, NestJS, and FastAPI/Django, with solid experience in authentication and system integration. Worked with multiple databases (PostgreSQL, MySQL, MongoDB) to design efficient data models and manage application data. Followed modern development practices including Git/GitHub workflows, Agile/Scrum, CI/CD basics, and clean architecture principles (SOLID, design patterns).",
+            "website": "https://digital-hub.siblen.com"
         },
         {
-            "title": "Backend Developer",
-            "company": "Halal Education",
-            "period": "2021 - 2022",
-            "description": "Built responsive educational web applications. Focused on creating accessible and intuitive user experiences.",
-            "website": "https://dev.halal.education"
+            "title": "Web Developer",
+            "company": "Cyber Weavers",
+            "period": "June 2024 - March 2026",
+            "description": "Developed and maintained web applications using Next.js, and Express.js. Integrated REST APIs, improved UI components, and optimized performance. Implemented dashboards, landing pages, and interactive interfaces. Collaborated with designers and developers to deliver scalable features.",
+            "website": ""
+        },
+        {
+            "title": "Coding Teacher",
+            "company": "BrightChamps Academy",
+            "period": "June 2022 - March 2026",
+            "description": "Taught Python, Java, HTML/CSS/JavaScript and other programming languages to students aged 8–16. Helped students build practical mini-projects. Prepared structured lessons and improved student engagement through hands-on coding.",
+            "website": ""
         }
     ],
     "education": {
@@ -94,7 +101,7 @@
             "technologies": ["Next.js", "Django", "DRF", "Stripe", "PayPal", "SQLite", "JWT"],
             "url": "https://luxe--commerce.vercel.app/",
             "github": "https://github.com/Hadi20Diab/e-commerce-django",
-            "featured": true,
+            "featured": false,
             "category": "Full Stack"
         },
         {
@@ -104,7 +111,7 @@
             "technologies": ["Angular", "FastAPI", "Supabase", "PostgreSQL", "CDK D&D", "Python"],
             "url": "https://trackify-board.vercel.app",
             "github": "https://github.com/Hadi20Diab/trackify",
-            "featured": true,
+            "featured": false,
             "category": "Full Stack"
         },
         {
@@ -118,10 +125,20 @@
             "category": "AI Platform"
         },
         {
-            "name": "Halal Education Portal",
-            "tagline": "Online learning platform",
-            "description": "Educational web application for online learning management. Focused on creating accessible, intuitive user experiences for students and instructors.",
-            "technologies": ["React.js", "Express.js", "MySQL"],
+            "name": "Efendim: AI Chatbot Platform",
+            "tagline": "Customizable AI chatbot widget",
+            "description": "Built a customizable AI chatbot widget for integration into websites. Developed a multi-project dashboard: analytics, chatbot training, and customization. Implemented authentication, project control, and API/webhook integrations. Integrated Stripe for billing and automated subscription handling.",
+            "technologies": ["Next.js", "Firebase", "Node.js", "Stripe", "REST APIs"],
+            "url": "",
+            "github": "",
+            "featured": false,
+            "category": "AI Platform"
+        },
+        {
+            "name": "Halal Education: Marketplace",
+            "tagline": "Halal-compliant online marketplace",
+            "description": "Designed and implemented the backend architecture for a halal-compliant online marketplace. Built features including user roles, product listings, secure transactions, and order workflows. Collaborated with the frontend team to ensure smooth integration with backend services. Developed scalable APIs with full documentation using OpenAPI. Containerized backend services using Docker Compose for efficient development and deployment.",
+            "technologies": ["Next.js", "Express.js", "Prisma", "PostgreSQL", "Docker Compose", "OpenAPI"],
             "url": "https://dev.halal.education",
             "github": "",
             "featured": true,
