@@ -58,7 +58,7 @@ export default function HeroSection() {
                 </div>
                 <div className="heroImage">
                     <div className="portrait">
-                        <Image src="/hero-Image.png" alt="Hadi Diab" width={600} height={800} priority style={{ objectFit: 'contain', objectPosition: 'bottom center' }} />
+                        <Image src="/hero-Image4.png" alt="Hadi Diab" width={600} height={800} priority style={{ objectFit: 'contain', objectPosition: 'bottom center' }} />
                     </div>
                 </div>
             </section>

@@ -11,9 +11,43 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: var(--bg);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    /* transparent by default — no bg, no blur */
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition:
+        background vars.$transition-base ease,
+        backdrop-filter vars.$transition-base ease,
+        box-shadow vars.$transition-base ease;
+
+    /* ── scrolled: solid bg + blur ─────────────────────────────────────── */
+    &.scrolled {
+        background: var(--bg);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    /* ── light mode at top: hide nav links (they sit over light bg, visible) */
+    /* In light mode the left half is the light page bg — links are fine there,
+       but user wants them hidden until scrolled */
+    &.atTop {
+        .navLinks {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    /* In dark mode at top links are always visible (white text on dark panel) */
+    &:not(.atTop) .navLinks,
+    &.scrolled .navLinks {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .navLinks {
+        transition: opacity vars.$transition-base ease;
+    }
 
     .logoDiv {
         width: 3.5rem;
@@ -62,7 +96,7 @@
             border: none;
             cursor: pointer;
             
-            a{
+            a {
                 color: #fff;
             }
         }
@@ -71,20 +105,16 @@
 
 @media screen and (max-width: 768px) {
     .navContainer {
+        padding: vars.$space-md vars.$space-lg;
+
         .navList {
             display: none;
         }
 
-        a {
-            text-decoration: none;
-            color: var(--text);
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: all 0.3s ease-in-out;
-
-            &:hover {
-                color: var(--brand);
-            }
+        /* always show the ThemeToggle even on mobile */
+        .navLinks {
+            opacity: 1 !important;
+            pointer-events: auto !important;
         }
     }
 }
