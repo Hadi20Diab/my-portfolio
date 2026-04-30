@@ -285,13 +285,26 @@
       &:hover {
         box-shadow: 0 12px 40px rgba(255,255,255,0.08);
       }
+
+      /* In dark mode --brand is a light pastel blue (#9fc8ff),
+         white text on it fails contrast — force solid blue */
+      .projectLink.primary {
+        background: vars.$brand;
+        color: #fff;
+
+        &:hover {
+          background: vars.$brand-600;
+          color: #fff;
+        }
+      }
     }
 
     .techStack .techBadge {
       background: rgba(255,255,255,0.06);
-      
+      color: rgba(255,255,255,0.85);
+
       &:hover {
-        background: var(--brand);
+        background: vars.$brand;
         color: white;
       }
     }

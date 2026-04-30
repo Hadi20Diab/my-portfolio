@@ -4,7 +4,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    overflow: hidden;
+    // overflow: hidden;
+    position: relative;
+    min-height: 70vh;
 
     .heroContant {
         padding: vars.$space-xxl vars.$space-xl;
@@ -12,6 +14,7 @@
         margin: 0 auto;
         text-align: left;
         z-index: 2;
+        position: relative;
 
         .heroTitle {
             position: relative;
@@ -120,40 +123,43 @@
 
     .heroImage {
         position: absolute;
-        min-height: 70vh;
-        background: vars.$hero-dark;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* angled divider */
-        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
         top: 0;
         right: 0;
-        z-index: -1;
-        padding-top: 5rem;
-        width: 55%;
+        width: 60%;
+        height: 100%;
+        background: vars.$hero-dark;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        /* prominent angled divider — matches template */
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+        z-index: 1;
+        overflow: hidden;
 
         .portrait {
-            position: relative;
-            height: auto;
-            margin-bottom: -0.2rem;
+            // position: relative;
+            // width: 85%;
+            // height: 95%;
 
             img {
-                position: static !important;
+                object-fit: contain;
+                object-position: bottom center;
+                width: auto;
+                height: auto;
             }
         }
     }
 
-    /* tablet: shrink clip-path angle */
-    @media screen and (max-width: 1024px) and (min-width: 769px) {
+    /* tablet 901–1024px: keep angle but slightly narrower */
+    @media screen and (max-width: 1024px) and (min-width: 901px) {
         .heroImage {
-            width: 50%;
-            clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+            width: 55%;
+            clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%);
         }
     }
 
-    /* mobile: stack vertically, image on top */
-    @media screen and (max-width: #{vars.$bp-md}) {
+    /* mobile / small tablet ≤900px: stack vertically, image on top */
+    @media screen and (max-width: 900px) {
         display: flex;
         flex-direction: column-reverse;
         min-height: unset;
@@ -161,8 +167,8 @@
         .heroImage {
             position: relative;
             width: 100%;
-            min-height: 55vw;
-            max-height: 320px;
+            min-height: 50vw;
+            max-height: 380px;
             clip-path: none;
             z-index: 0;
             padding-top: 0;
@@ -217,6 +223,7 @@
     padding: 3.5rem 0;
     position: relative;
     overflow: hidden;
+    margin-top: - vars.$section-spacing;
 
     .featureInner {
         max-width: vars.$container-max;
