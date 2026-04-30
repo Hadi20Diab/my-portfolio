@@ -53,26 +53,27 @@
             "company": "Digital Hub, Siblen, Lebanon, Hybrid",
             "period": "Jan 2026 - May 2026",
             "description": "Built and deployed full-stack web applications using Next.js, React, and Node.js, delivering scalable and user-focused solutions. Designed and developed RESTful APIs with Express.js, NestJS, and FastAPI/Django, with solid experience in authentication and system integration. Worked with multiple databases (PostgreSQL, MySQL, MongoDB) to design efficient data models and manage application data. Followed modern development practices including Git/GitHub workflows, Agile/Scrum, CI/CD basics, and clean architecture principles (SOLID, design patterns).",
-            "website": "https://digital-hub.siblen.com"
+            "website": "https://www.linkedin.com/company/the-digital-hub-unrwa/"
         },
         {
             "title": "Web Developer",
             "company": "Cyber Weavers",
             "period": "June 2024 - March 2026",
             "description": "Developed and maintained web applications using Next.js, and Express.js. Integrated REST APIs, improved UI components, and optimized performance. Implemented dashboards, landing pages, and interactive interfaces. Collaborated with designers and developers to deliver scalable features.",
-            "website": ""
+            "website": "https://cyber-weavers.com"
         },
         {
             "title": "Coding Teacher",
             "company": "BrightChamps Academy",
             "period": "June 2022 - March 2026",
             "description": "Taught Python, Java, HTML/CSS/JavaScript and other programming languages to students aged 8–16. Helped students build practical mini-projects. Prepared structured lessons and improved student engagement through hands-on coding.",
-            "website": ""
+            "website": "https://brightchamps.com"
         }
     ],
     "education": {
         "degree": "Computer Engineering",
         "institution": "Lebanese University",
+        "institutionUrl": "https://liu.edu.lb/LIU/",
         "period": "2018 - 2022",
         "description": "Focused on software engineering, web development, and computer systems."
     },

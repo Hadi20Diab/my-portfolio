@@ -72,7 +72,10 @@ export default function ExperienceSection() {
                   <div className="timelineHeader">
                     <div>
                       <h3>{education.degree}</h3>
-                      <span className="company">{education.institution}</span>
+                      {education.institutionUrl
+                            ? <a href={education.institutionUrl} target="_blank" rel="noopener noreferrer" className="company">{education.institution} <FiExternalLink /></a>
+                            : education.institution
+                      }
                     </div>
                     <span className="period">{education.period}</span>
                   </div>
