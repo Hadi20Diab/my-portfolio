@@ -22,7 +22,7 @@ export default function ProjectsPage() {
   if (!data) return <div style={{ padding: '4rem 0' }}><Loading text="Loading projects" /></div>
 
   return (
-    <main className="projectsSection" style={{ padding: '4rem 0' }}>
+    <section className="projectsSection" style={{ padding: '4rem 0' }}>
       <div className="projectsContainer">
         <TitleBox><h2>All Projects</h2></TitleBox>
 
@@ -67,6 +67,6 @@ export default function ProjectsPage() {
           ))}
         </div>
       </div>
-    </main>
+    </section>
   )
 }

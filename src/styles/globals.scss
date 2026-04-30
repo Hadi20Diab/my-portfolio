@@ -98,6 +98,7 @@ main {
   flex-direction: column;
   gap: vars.$section-spacing;
   text-align: center;
+  margin-top: vars.$space-xxl;
 }
 
 /* ── Component styles bundled here to avoid HMR style-drop ─────────────── */
