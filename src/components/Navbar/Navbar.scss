@@ -37,7 +37,7 @@
             padding: vars.$space-xs 0;
             
             a {
-                color: vars.$muted-bg;
+                color: var(--text);
                 text-decoration: none;
                 font-size: 1.05rem;
                 font-weight: 600;
@@ -51,7 +51,7 @@
         }
 
         .navButton {
-            background: vars.$muted-bg;
+            background: var(--brand);
             padding: 0 vars.$space-md;
             border-radius: vars.$radius-xxl;
             box-shadow: vars.$shadow-sm;
@@ -62,7 +62,7 @@
             cursor: pointer;
             
             a{
-                color: vars.$main-color;
+                color: #fff;
             }
         }
     }
@@ -76,7 +76,7 @@
 
         a {
             text-decoration: none;
-            color: vars.$muted-bg;
+            color: var(--text);
             font-size: 1.2rem;
             font-weight: 600;
             transition: all 0.3s ease-in-out;

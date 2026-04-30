@@ -119,7 +119,7 @@
     }
 
     .heroImage {
-        position: relative;
+        position: absolute;
         min-height: 70vh;
         background: vars.$hero-dark;
         display: flex;
@@ -130,7 +130,6 @@
         top: 0;
         right: 0;
         z-index: -1;
-        position: absolute;
         padding-top: 5rem;
         width: 55%;
 
@@ -145,19 +144,69 @@
         }
     }
 
-    /* responsive: stack on small screens */
+    /* tablet: shrink clip-path angle */
+    @media screen and (max-width: 1024px) and (min-width: 769px) {
+        .heroImage {
+            width: 50%;
+            clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+
+    /* mobile: stack vertically, image on top */
     @media screen and (max-width: #{vars.$bp-md}) {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
+        min-height: unset;
 
         .heroImage {
-            order: -1;
-            min-height: 50vh;
+            position: relative;
+            width: 100%;
+            min-height: 55vw;
+            max-height: 320px;
             clip-path: none;
+            z-index: 0;
+            padding-top: 0;
+            top: auto;
+            right: auto;
+        }
+
+        .heroContant {
+            padding: vars.$space-xl vars.$space-lg;
+            text-align: center;
+            width: 100%;
+
+            .heroButtons {
+                justify-content: center;
+            }
+
+            .socials {
+                justify-content: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .heroImage {
+            max-height: 260px;
         }
 
         .heroContant {
             padding: vars.$space-lg vars.$space-md;
-            text-align: center;
+
+            h1 {
+                font-size: clamp(1.7rem, 9vw, 2.5rem);
+            }
+
+            .heroButtons {
+                flex-direction: column;
+                align-items: center;
+                gap: vars.$space-sm;
+
+                .ctaOutline, .ctaPrimary {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
         }
     }
 }

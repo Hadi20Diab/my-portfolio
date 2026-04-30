@@ -1,0 +1,44 @@
+@use '../../styles/variables' as vars;
+
+.scrollToTop {
+  position: fixed;
+  bottom: vars.$space-xl;
+  right: vars.$space-xl;
+  z-index: 999;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateY(16px) scale(0.85);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  &:hover {
+    background: var(--brand-hover, #0060e0);
+    transform: translateY(-3px) scale(1);
+  }
+
+  @media (max-width: 480px) {
+    bottom: vars.$space-lg;
+    right: vars.$space-lg;
+  }
+}

@@ -12,20 +12,21 @@
 
   .projectsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: vars.$space-xl;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: vars.$space-lg;
     margin: vars.$space-xxl 0;
   }
 
   .projectCard {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: vars.$radius-lg;
-    padding: vars.$space-xl;
+    border-radius: vars.$radius-md;
+    padding: vars.$space-lg;
     text-align: left;
     transition: all vars.$transition-base ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
     &::before {
       content: '';
@@ -42,7 +43,7 @@
 
     &:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
       border-color: var(--brand);
 
       &::before {

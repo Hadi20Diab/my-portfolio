@@ -125,16 +125,6 @@
             "category": "AI Platform"
         },
         {
-            "name": "Efendim: AI Chatbot Platform",
-            "tagline": "Customizable AI chatbot widget",
-            "description": "Built a customizable AI chatbot widget for integration into websites. Developed a multi-project dashboard: analytics, chatbot training, and customization. Implemented authentication, project control, and API/webhook integrations. Integrated Stripe for billing and automated subscription handling.",
-            "technologies": ["Next.js", "Firebase", "Node.js", "Stripe", "REST APIs"],
-            "url": "",
-            "github": "",
-            "featured": false,
-            "category": "AI Platform"
-        },
-        {
             "name": "Halal Education: Marketplace",
             "tagline": "Halal-compliant online marketplace",
             "description": "Designed and implemented the backend architecture for a halal-compliant online marketplace. Built features including user roles, product listings, secure transactions, and order workflows. Collaborated with the frontend team to ensure smooth integration with backend services. Developed scalable APIs with full documentation using OpenAPI. Containerized backend services using Docker Compose for efficient development and deployment.",
